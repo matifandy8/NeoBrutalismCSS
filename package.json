@@ -1,0 +1,35 @@
+{
+  "name": "neubrutalism-ui-library",
+  "version": "1.0.0",
+  "description": "UI Library is a cutting-edge and innovative user interface (UI) toolkit that combines the bold aesthetics of brutalist design with the elegance of neumorphism",
+  "main": "index.js",
+  "scripts": {
+    "compile-scss": "node-sass src/sass/index.scss dist/index.css",
+    "build": "npm run compile-scss"
+  },
+  "keywords": [
+    "bootstrap",
+    "css",
+    "css3",
+    "flexbox",
+    "front-end",
+    "framework",
+    "html",
+    "html5",
+    "kickstarter",
+    "less",
+    "responsive",
+    "mobile",
+    "mobile-first",
+    "postcss",
+    "responsive",
+    "sass",
+    "scss",
+    "stylus"
+  ],
+  "author": "Matias Fandiño",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

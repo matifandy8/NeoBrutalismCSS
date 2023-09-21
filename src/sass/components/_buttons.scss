@@ -1,0 +1,57 @@
+@mixin button-styles(
+  $bg-color: #ff5733,
+  $text-color: white,
+  $hover-bg-color: #d64b2b
+) {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+button {
+  @include button-styles;
+}
+
+.red {
+  @include button-styles(
+    $bg-color: #ff5733,
+    $text-color: white,
+    $hover-bg-color: #d64b2b
+  );
+}
+
+.blue {
+  @include button-styles(
+    $bg-color: #0077b6,
+    $text-color: white,
+    $hover-bg-color: #005785
+  );
+}

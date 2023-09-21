@@ -1,0 +1,86 @@
+/* Reset margins and paddings */
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Make sure the page takes the full viewport */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Use a box-sizing border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove underlines from links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Disable user selection for the entire document */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure text remains visible during webfont load */
+/* Replace 'your-font-family' with your preferred font family */
+@font-face {
+  font-family: "your-font-family";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("your-font-family"), url("your-font-url.woff2") format("woff2");
+}
+
+/* Reset some form elements */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  appearance: none;
+  border-radius: 0;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+}
