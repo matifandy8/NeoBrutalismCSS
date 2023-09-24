@@ -1,7 +1,7 @@
 @mixin button-styles(
-  $bg-color: #ff5733,
-  $text-color: white,
-  $hover-bg-color: #d64b2b
+  $bg-color: #ffffff,
+  $text-color: #000000,
+  $hover-bg-color: #d9ece9
 ) {
   display: inline-block;
   padding: 10px 20px;
@@ -15,11 +15,12 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
   transition: background-color 0.3s ease, transform 0.2s ease;
 
   &:hover {
     background-color: $hover-bg-color;
-    transform: translateY(-2px);
   }
 
   &:focus {
@@ -27,7 +28,6 @@
   }
 
   &:active {
-    transform: translateY(2px);
   }
 
   &.disabled {
@@ -36,7 +36,7 @@
   }
 }
 
-button {
+.btn {
   @include button-styles;
 }
 
@@ -53,5 +53,60 @@ button {
     $bg-color: #0077b6,
     $text-color: white,
     $hover-bg-color: #005785
+  );
+}
+
+.green {
+  @include button-styles(
+    $bg-color: #40d39c,
+    $text-color: white,
+    $hover-bg-color: #30ac7e
+  );
+}
+
+.sky-blue {
+  @include button-styles(
+    $bg-color: #b9e2f8,
+    $text-color: white,
+    $hover-bg-color: #91bed6
+  );
+}
+
+.pale-red {
+  @include button-styles(
+    $bg-color: #ffc5c8,
+    $text-color: white,
+    $hover-bg-color: #ffb2b2
+  );
+}
+
+.pale-violet {
+  @include button-styles(
+    $bg-color: #bc98cb,
+    $text-color: white,
+    $hover-bg-color: #b482c9
+  );
+}
+
+.soft-blue {
+  @include button-styles(
+    $bg-color: #4799ae,
+    $text-color: white,
+    $hover-bg-color: #378589
+  );
+}
+.pale-cyan {
+  @include button-styles(
+    $bg-color: #b9e7de,
+    $text-color: white,
+    $hover-bg-color: #a0e5d7
+  );
+}
+
+.pale-yellow {
+  @include button-styles(
+    $bg-color: #fdfd96,
+    $text-color: white,
+    $hover-bg-color: #fcfc7e
   );
 }
