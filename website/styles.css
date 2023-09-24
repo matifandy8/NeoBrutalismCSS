@@ -1,0 +1,110 @@
+/* Reset Box Model and Margins */
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+header {
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.nav-links a:hover {
+  text-decoration-line: underline;
+}
+
+.presentation {
+  font-family: Proza Libre, sans-serif;
+  border-style: solid;
+  display: flex;
+  height: 85vh;
+  border-radius: 1.5rem;
+  border-width: 4px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  background-color: #fdfd96;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 380px;
+}
+
+.title {
+  text-align: center;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+  margin: 0;
+  font-weight: 700;
+  font-family: Stint Ultra Expanded, cursive;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.description {
+  font-family: Proza Libre, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+  margin: 0;
+  margin-top: 3rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.btn {
+  margin: 20px;
+}
