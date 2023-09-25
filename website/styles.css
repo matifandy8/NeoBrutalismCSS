@@ -27,6 +27,7 @@ header {
   color: #fff;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  font-family: "Public Sans", sans-serif;
 }
 
 nav {
@@ -88,13 +89,13 @@ nav {
   border-color: #e5e7eb;
   margin: 0;
   font-weight: 700;
-  font-family: Stint Ultra Expanded, cursive;
+  font-family: "Lexend Mega", sans-serif;
   font-size: 5rem;
   line-height: 1;
 }
 
 .description {
-  font-family: Proza Libre, sans-serif;
+  font-family: "Public Sans", sans-serif;
   text-align: center;
   box-sizing: border-box;
   border-width: 0;
@@ -106,5 +107,6 @@ nav {
   line-height: 2.5rem;
 }
 .btn {
+  font-family: "Public Sans", sans-serif;
   margin: 20px;
 }
