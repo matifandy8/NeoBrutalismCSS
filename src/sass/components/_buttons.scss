@@ -42,71 +42,71 @@
 
 .red {
   @include button-styles(
-    $bg-color: #ff5733,
+    $bg-color: $red,
     $text-color: white,
-    $hover-bg-color: #d64b2b
+    $hover-bg-color: $hover-red
   );
 }
 
 .blue {
   @include button-styles(
-    $bg-color: #0077b6,
+    $bg-color: $blue,
     $text-color: white,
-    $hover-bg-color: #005785
+    $hover-bg-color: $hover-blue
   );
 }
 
 .green {
   @include button-styles(
-    $bg-color: #40d39c,
+    $bg-color: $green,
     $text-color: white,
-    $hover-bg-color: #30ac7e
+    $hover-bg-color: $hover-green
   );
 }
 
 .sky-blue {
   @include button-styles(
-    $bg-color: #b9e2f8,
+    $bg-color: $sky-blue,
     $text-color: white,
-    $hover-bg-color: #91bed6
+    $hover-bg-color: $hover-sky-blue
   );
 }
 
 .pale-red {
   @include button-styles(
-    $bg-color: #ffc5c8,
+    $bg-color: $pale-red,
     $text-color: white,
-    $hover-bg-color: #ffb2b2
+    $hover-bg-color: $hover-pale-red
   );
 }
 
 .pale-violet {
   @include button-styles(
-    $bg-color: #bc98cb,
+    $bg-color: $pale-violet,
     $text-color: white,
-    $hover-bg-color: #b482c9
+    $hover-bg-color: $hover-pale-violet
   );
 }
 
 .soft-blue {
   @include button-styles(
-    $bg-color: #4799ae,
+    $bg-color: $soft-blue,
     $text-color: white,
-    $hover-bg-color: #378589
+    $hover-bg-color: $hover-soft-blue
   );
 }
 .pale-cyan {
   @include button-styles(
-    $bg-color: #b9e7de,
+    $bg-color: $pale-cyan,
     $text-color: white,
-    $hover-bg-color: #a0e5d7
+    $hover-bg-color: $hover-pale-cyan
   );
 }
 
 .pale-yellow {
   @include button-styles(
-    $bg-color: #fdfd96,
-    $text-color: white,
-    $hover-bg-color: #fcfc7e
+    $bg-color: $pale-yellow,
+    $text-color: black,
+    $hover-bg-color: $hover-pale-yellow
   );
 }
