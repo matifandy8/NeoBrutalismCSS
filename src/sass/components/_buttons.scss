@@ -1,8 +1,4 @@
-@mixin button-styles(
-  $bg-color: #ffffff,
-  $text-color: #000000,
-  $hover-bg-color: #d9ece9
-) {
+@mixin button-styles($bg-color, $text-color, $hover-bg-color) {
   display: inline-block;
   padding: 10px 20px;
   background-color: $bg-color;
@@ -27,86 +23,67 @@
     outline: none;
   }
 
-  &:active {
-  }
-
   &.disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
 }
 
-.btn {
-  @include button-styles;
-}
+$button-variants: (
+  default: (
+    #ffffff,
+    #000000,
+    #aaaaaa,
+  ),
+  red: (
+    $red,
+    white,
+    $hover-red,
+  ),
+  blue: (
+    $blue,
+    white,
+    $hover-blue,
+  ),
+  green: (
+    $green,
+    white,
+    $hover-green,
+  ),
+  sky-blue: (
+    $sky-blue,
+    white,
+    $hover-sky-blue,
+  ),
+  pale-red: (
+    $pale-red,
+    white,
+    $hover-pale-red,
+  ),
+  pale-violet: (
+    $pale-violet,
+    white,
+    $hover-pale-violet,
+  ),
+  soft-blue: (
+    $soft-blue,
+    white,
+    $hover-soft-blue,
+  ),
+  pale-cyan: (
+    $pale-cyan,
+    white,
+    $hover-pale-cyan,
+  ),
+  pale-yellow: (
+    $pale-yellow,
+    black,
+    $hover-pale-yellow,
+  ),
+);
 
-.red {
-  @include button-styles(
-    $bg-color: $red,
-    $text-color: white,
-    $hover-bg-color: $hover-red
-  );
-}
-
-.blue {
-  @include button-styles(
-    $bg-color: $blue,
-    $text-color: white,
-    $hover-bg-color: $hover-blue
-  );
-}
-
-.green {
-  @include button-styles(
-    $bg-color: $green,
-    $text-color: white,
-    $hover-bg-color: $hover-green
-  );
-}
-
-.sky-blue {
-  @include button-styles(
-    $bg-color: $sky-blue,
-    $text-color: white,
-    $hover-bg-color: $hover-sky-blue
-  );
-}
-
-.pale-red {
-  @include button-styles(
-    $bg-color: $pale-red,
-    $text-color: white,
-    $hover-bg-color: $hover-pale-red
-  );
-}
-
-.pale-violet {
-  @include button-styles(
-    $bg-color: $pale-violet,
-    $text-color: white,
-    $hover-bg-color: $hover-pale-violet
-  );
-}
-
-.soft-blue {
-  @include button-styles(
-    $bg-color: $soft-blue,
-    $text-color: white,
-    $hover-bg-color: $hover-soft-blue
-  );
-}
-.pale-cyan {
-  @include button-styles(
-    $bg-color: $pale-cyan,
-    $text-color: white,
-    $hover-bg-color: $hover-pale-cyan
-  );
-}
-
-.pale-yellow {
-  @include button-styles(
-    $bg-color: $pale-yellow,
-    $text-color: black,
-    $hover-bg-color: $hover-pale-yellow
-  );
+@each $variant, $colors in $button-variants {
+  button.#{$variant} {
+    @include button-styles($colors...);
+  }
 }
