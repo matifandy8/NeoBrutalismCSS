@@ -1,0 +1,103 @@
+// Define a mixin for input styles
+@mixin input-styles($bg-color, $text-color, $border-color, $hover-bg-color) {
+  padding: 10px;
+  background-color: $bg-color;
+  color: $text-color;
+  border: 2px solid $border-color;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 0px 0px #000;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $hover-bg-color;
+  }
+
+  &.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  &::placeholder {
+    color: $text-color;
+    opacity: 1;
+    text-align: left;
+  }
+}
+
+$input-variants: (
+  default: (
+    #ffffff,
+    #000000,
+    #cccccc,
+    #aaaaaa,
+  ),
+  red: (
+    $red,
+    black,
+    black,
+    $hover-red,
+  ),
+  blue: (
+    $blue,
+    white,
+    black,
+    $hover-blue,
+  ),
+  green: (
+    $green,
+    white,
+    black,
+    $hover-green,
+  ),
+  sky-blue: (
+    $sky-blue,
+    white,
+    black,
+    $hover-sky-blue,
+  ),
+  pale-red: (
+    $pale-red,
+    white,
+    black,
+    $hover-pale-red,
+  ),
+  pale-violet: (
+    $pale-violet,
+    white,
+    black,
+    $hover-pale-violet,
+  ),
+  soft-blue: (
+    $soft-blue,
+    white,
+    black,
+    $hover-soft-blue,
+  ),
+  pale-cyan: (
+    $pale-cyan,
+    white,
+    black,
+    $hover-pale-cyan,
+  ),
+  pale-yellow: (
+    $pale-yellow,
+    black,
+    black,
+    $hover-pale-yellow,
+  ),
+);
+
+@each $variant, $colors in $input-variants {
+  input.#{$variant} {
+    @include input-styles($colors...);
+  }
+}
