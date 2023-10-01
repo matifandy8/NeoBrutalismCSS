@@ -1,26 +1,8 @@
 /* Reset Box Model and Margins */
 html,
-body,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-form,
-fieldset,
-legend,
-input,
-button,
-textarea,
-select {
+body {
   margin: 0;
   padding: 0;
-  border: 0;
 }
 
 header {
@@ -74,11 +56,11 @@ nav {
   border-width: 4px;
   margin-left: 3rem;
   margin-right: 3rem;
-  background-color: #fdfd96;
+  background-color: #ffc0cb;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 380px;
+  padding: 0 10%;
 }
 
 .title {
@@ -102,11 +84,80 @@ nav {
   border-style: solid;
   border-color: #e5e7eb;
   margin: 0;
-  margin-top: 3rem;
+  margin: 3rem;
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
-.btn {
+
+@media (max-width: 1250px) {
+  .title {
+    font-size: 4rem;
+  }
+  .description {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .presentation {
+    margin: 0;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .description {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .description {
+    margin: 10px;
+    line-height: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+button {
   font-family: "Public Sans", sans-serif;
   margin: 20px;
+}
+input {
+  font-family: "Public Sans", sans-serif;
+  margin: 20px;
+}
+
+.sections {
+  text-align: center;
+  margin: 3rem 6rem;
+}
+.backgrounds div {
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+}
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Lexend Mega", sans-serif;
+  line-height: 2.5rem;
+}
+p {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .sections {
+    margin: 1rem 2rem;
+  }
 }

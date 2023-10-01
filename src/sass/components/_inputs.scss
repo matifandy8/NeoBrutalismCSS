@@ -40,11 +40,11 @@ $input-variants: (
     #cccccc,
     #aaaaaa,
   ),
-  red: (
-    $red,
+  orange: (
+    $orange,
     black,
     black,
-    $hover-red,
+    $hover-orange,
   ),
   blue: (
     $blue,
@@ -97,7 +97,7 @@ $input-variants: (
 );
 
 @each $variant, $colors in $input-variants {
-  input.#{$variant} {
+  .nb-input.#{$variant} {
     @include input-styles($colors...);
   }
 }

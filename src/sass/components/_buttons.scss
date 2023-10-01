@@ -35,10 +35,10 @@ $button-variants: (
     #000000,
     #aaaaaa,
   ),
-  red: (
-    $red,
+  orange: (
+    $orange,
     white,
-    $hover-red,
+    $hover-orange,
   ),
   blue: (
     $blue,
@@ -83,7 +83,7 @@ $button-variants: (
 );
 
 @each $variant, $colors in $button-variants {
-  button.#{$variant} {
+  .nb-button.#{$variant} {
     @include button-styles($colors...);
   }
 }
