@@ -1,11 +1,20 @@
 {
-  "name": "neo-brutalism-ui-library",
+  "name": "neobrutalismccss",
   "version": "1.0.0",
-  "description": "UI Library is a cutting-edge and innovative user interface (UI) toolkit that combines the bold aesthetics of brutalist design with the elegance of neumorphism",
+  "description": "NeoBrutalismCSS is a cutting-edge and innovative user interface (UI) toolkit that combines the bold aesthetics of brutalist design with the elegance of neumorphism",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matifandy8/NeoBrutalismCSS"
+  },
+  "homepage": "",
+  "bugs": "https://github.com/matifandy8/NeoBrutalismCSS/issues",
   "scripts": {
     "compile-scss": "node-sass src/sass/index.scss dist/index.css",
-    "build": "npm run compile-scss"
+    "watch-scss": "node-sass --watch src/sass/index.scss dist/index.css",
+    "minify-css": "node-sass src/sass/index.scss dist/index.min.css --output-style compressed",
+    "build": "npm run compile-scss && npm run minify-css",
+    "start": "npm run watch-scss"
   },
   "keywords": [
     "bootstrap",
@@ -25,7 +34,8 @@
     "responsive",
     "sass",
     "scss",
-    "stylus"
+    "neo-brutalism",
+    "brutalism"
   ],
   "author": "Matias Fandiño",
   "license": "MIT",
