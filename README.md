@@ -1,6 +1,6 @@
 # NeoBrutalismCSS - Minimalist CSS Library
 
-![NeoBrutalismCSS Logo](website/assets/logo-with-text.png)
+![NeoBrutalismCSS Logo](website/assets/logo.png)
 
 **NeoBrutalismCSS** is a lightweight and minimalist CSS library inspired by the principles of brutalist web design. It provides a set of simple and modular CSS classes to help you create brutalist-style web pages with ease.
 
@@ -46,9 +46,30 @@ Include the following CSS link in the `<head>` section of your HTML file:
 2.Download the latest release and include it in your project manually.
 ```
 
-### Fonts
+## Fonts
 
-NeoBrutalismCSS doesn't provide any fonts, but we do maintain the following list of fonts that we recommend for usage alongside
+NeoBrutalismCSS doesn't provide any fonts, but we do maintain the following list of fonts that we recommend for usage alongside our framework:
+
+1. **Stint Ultra Expanded**
+
+   - [Font Link](https://fonts.google.com/specimen/Stint+Ultra+Expanded)
+   - Description: Stint Ultra Expanded is a distinctive and elegant font that works well for headings and titles. Its ultra-expanded width adds a unique touch to your designs.
+
+2. **Proza Libre**
+
+   - [Font Link](https://fonts.google.com/specimen/Proza+Libre)
+   - Description: Proza Libre is a versatile and highly readable sans-serif font. It's suitable for both body text and headings, making it a practical choice for various design applications.
+
+3. **Lexend Mega**
+
+   - [Font Link](https://fonts.google.com/specimen/Lexend+Mega)
+   - Description: Lexend Mega is an excellent font for improving readability, especially for large bodies of text. Its unique character spacing and design contribute to better legibility.
+
+4. **Public Sans**
+   - [Font Link](https://fonts.google.com/specimen/Public+Sans)
+   - Description: Public Sans is a clean and modern sans-serif font. It offers a wide range of weights and styles, making it suitable for various design projects, from websites to print materials.
+
+These fonts can help you achieve a harmonious and visually appealing typography in your NeoBrutalismCSS-based projects. Please ensure that you follow the provided links to access and integrate these fonts into your designs according to your preferences and requirements.
 
 ## Usage
 
