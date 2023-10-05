@@ -22,18 +22,6 @@ $bg-colors: (
   pale-yellow: $pale-yellow,
 );
 
-$bg-hover-colors: (
-  hover-orange: $hover-orange,
-  hover-blue: $hover-blue,
-  hover-green: $hover-green,
-  hover-sky-blue: $hover-sky-blue,
-  hover-pale-red: $hover-pale-red,
-  hover-pale-violet: $hover-pale-violet,
-  hover-soft-blue: $hover-soft-blue,
-  hover-pale-cyan: $hover-pale-cyan,
-  hover-pale-yellow: $hover-pale-yellow,
-);
-
 @each $color-name, $color-value in $text-colors {
   .text-#{$color-name} {
     color: $color-value;
@@ -42,10 +30,5 @@ $bg-hover-colors: (
 @each $color-name, $color-value in $bg-colors {
   .bg-#{$color-name} {
     background-color: $color-value;
-  }
-
-  $hover-color: map-get($bg-hover-colors, "hover-#{$color-name}");
-  .bg-#{$color-name}:hover {
-    background-color: $hover-color;
   }
 }
