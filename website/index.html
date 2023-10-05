@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav id="top">
             <div class="logo">
                 <img src="assets/logo-with-text.png" alt="logo" />
             </div>
@@ -37,22 +37,91 @@
         <a class="nb-button blue">Getting Started</a>
     </section>
     <main>
+        <section class="getting-started">
+            <h2>Getting Started</h2>
+            <p class="component-description">
+                To begin using NeoBrutalismCSS in your web projects, follow these simple steps:
+            </p>
+            <ol>
+                <li>
+                    <p><strong>Installation:</strong> Download the NeoBrutalismCSS library from the official website or
+                        include it via a package manager like npm, pnpm or yarn.</p>
+                    <figure class="highlight">
+                        <pre><code class="language-bash" data-lang="bash">npm <span class="nb">install </span>neobrutalismcss</code></pre>
+                    </figure>
+                </li>
+                <li>
+                    <p><strong>Include CSS:</strong> Include the NeoBrutalismCSS stylesheet in the `
+
+                        <head>` section of your HTML document:
+                    </p>
+                    <figure class="highlight">
+                        <pre><code class="language-bash" data-lang="bash">&lt;link rel="stylesheet" href="https://example.com/neobrutalism.css" /&gt;</code></pre>
+                    </figure>
+                </li>
+                <li>
+                    <p><strong>HTML Structure:</strong> Create your web page using the provided CSS classes and
+                        components, as demonstrated in the documentation.</p>
+                </li>
+                <li>
+                    <p><strong>Customization:</strong> Customize the styles and components according to your project's
+                        design requirements by overriding NeoBrutalismCSS classes.</p>
+                </li>
+            </ol>
+            <p class="component-description">
+                That's it! You're now ready to create web designs with the unique aesthetics of NeoBrutalism using
+                NeoBrutalismCSS.
+            </p>
+        </section>
         <section class="sections">
-            <h2>Buttons</h2>
+            <h2>Docs</h2>
+            <p class="component-description">
+                NeoBrutalismCSS is designed with simplicity in mind. Say goodbye to the complexities of learning
+                numerous class names found in other frameworks. Instead, it follows a minimalist approach by applying
+                fundamental styles based on HTML semantics.
+            </p>
+            <p class="component-description">
+                Embrace a streamlined, no-frills approach to web design with NeoBrutalismCSS and start creating modern,
+                neo-brutalist aesthetics with ease.
+            </p>
+        </section>
+        <section class="sections">
+            <h2>Components</h2>
+        </section>
+
+        <section class="sections">
+            <h3>Buttons</h3>
+            <p class="component-description">
+                Section showcases different button styles offered by NeoBrutalismCSS, including default,
+                orange, blue, and green buttons.
+            </p>
             <button class="nb-button default">Click Here</button>
             <button class="nb-button orange">Click Here</button>
             <button class="nb-button blue">Click Here</button>
             <button class="nb-button green">Click Here</button>
+            <hr>
+            <button class="nb-button default rounded">Click Here</button>
+            <button class="nb-button orange rounded">Click Here</button>
+            <button class="nb-button blue rounded">Click Here</button>
+            <button class="nb-button green rounded">Click Here</button>
         </section>
         <section class="sections">
-            <h2>Inputs</h2>
+            <h3>Inputs</h3>
+            <p class="component-description">
+                Section demonstrates various input field styles, including default, orange, blue, and green
+                inputs, provided by NeoBrutalismCSS.
+            </p>
             <input type="text" class="nb-input default" placeholder="Text" />
             <input type="text" class="nb-input orange" placeholder="Text" />
             <input type="password" class="nb-input blue" placeholder="Password" />
             <input type="email" class="nb-input green" placeholder="Email@example.com" />
         </section>
         <section class="sections backgrounds">
-            <h2>Colors</h2>
+            <h3>Colors</h3>
+            <p class="component-description">
+                Section, you can see different colored background elements with their respective color
+                names. NeoBrutalismCSS offers a range of background colors.
+            </p>
             <div class="bg-orange">
                 <p>#ff5733 orange</p>
             </div>
@@ -81,8 +150,54 @@
                 <p>#fdfd96 pale-yellow</p>
             </div>
         </section>
+        <section class="sections">
+            <h3>Dialog</h3>
+            <p class="component-description">
+                Section presents a dialog box with text content and buttons. It illustrates a user
+                interface component provided by NeoBrutalismCSS for dialogs and pop-ups.
+            </p>
+            <div class="container">
+                <div class="dialog">
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+                        officiis officia, nulla commodi repellat modi ab et ea! Excepturi molestiae voluptatibus
+                        voluptatum</p>
+                    <p>Not sure how I feel about it</p>
+                    <div class="button-container">
+                        <button class="nb-button default">Cancel</button>
+                        <button class="nb-button green">Save</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
-    <footer></footer>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="NeoBrutalismCSS Logo" />
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="https://github.com/matifandy8/NeoBrutalismCSS" target="_blank">
+                            <img src="assets/github.svg" alt="GitHub"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-buttons">
+            <a href="#top" class="nb-button blue"><i class="fas fa-arrow-up"></i> Back to top</a>
+            <a href="https://github.com/matifandy8/NeoBrutalismCSS/issues" target="_blank" class="nb-button blue"><i
+                    class="fas fa-bug"></i> Report an issue</a>
+            <a class="nb-button blue"><i class="fas fa-donate"></i> Donate</a>
+        </div>
+        <div class="footer-made-by">
+            <p>Made by Matias Fandiño</p>
+        </div>
+        <div class="copyright">
+            &copy; 2023 NeoBrutalismCSS. All rights reserved.
+        </div>
+    </footer>
+
 </body>
 
 </html>

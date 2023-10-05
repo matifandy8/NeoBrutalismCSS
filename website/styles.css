@@ -5,6 +5,11 @@ body {
   padding: 0;
 }
 
+body {
+  max-width: 1300px;
+  margin: auto;
+}
+
 header {
   color: #fff;
   padding-top: 2rem;
@@ -54,8 +59,6 @@ nav {
   height: 85vh;
   border-radius: 1.5rem;
   border-width: 4px;
-  margin-left: 3rem;
-  margin-right: 3rem;
   background-color: #ffc0cb;
   justify-content: center;
   align-items: center;
@@ -88,6 +91,110 @@ nav {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
+.component-description {
+}
+.highlight {
+  background-color: #f3f3f6;
+}
+pre {
+  font-size: 1em;
+  overflow-x: auto;
+  padding: 1rem;
+}
+code {
+  background: none;
+  padding: 0;
+}
+
+button {
+  font-family: "Public Sans", sans-serif;
+  margin: 20px;
+}
+a {
+  font-family: "Public Sans", sans-serif;
+}
+input {
+  font-family: "Public Sans", sans-serif;
+  margin: 20px;
+}
+
+.sections {
+  text-align: left;
+  margin: 3rem 6rem;
+}
+.backgrounds div {
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+}
+h1 {
+  font-weight: 700;
+  font-family: "Lexend Mega", sans-serif;
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Lexend Mega", sans-serif;
+  line-height: 2rem;
+}
+p {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.getting-started {
+  text-align: left;
+  margin: 3rem 6rem;
+}
+
+/* Footer Styles */
+.site-footer {
+  color: #000;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 50px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  font-family: "Public Sans", sans-serif;
+  display: inline;
+  margin-right: 20px;
+}
+.footer-links li a img {
+  width: 50px;
+}
+
+.footer-made-by {
+  margin-top: 20px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 12px;
+  font-family: "Public Sans", sans-serif;
+}
 
 @media (max-width: 1250px) {
   .title {
@@ -107,57 +214,27 @@ nav {
   .description {
     font-size: 1.5rem;
   }
-}
-@media (max-width: 600px) {
-  .title {
-    font-size: 2rem;
+  .getting-started {
+    margin: 1rem 2rem;
   }
-  .description {
-    font-size: 1rem;
+  .sections {
+    margin: 1rem 2rem;
   }
 }
+
 @media (max-width: 600px) {
   .title {
     font-size: 1.5rem;
   }
   .description {
     margin: 10px;
-    line-height: 1rem;
-    font-size: 0.8rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
   }
-}
-
-button {
-  font-family: "Public Sans", sans-serif;
-  margin: 20px;
-}
-input {
-  font-family: "Public Sans", sans-serif;
-  margin: 20px;
-}
-
-.sections {
-  text-align: center;
-  margin: 3rem 6rem;
-}
-.backgrounds div {
-  width: 300px;
-  margin: auto;
-  padding: 10px;
-}
-h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  font-weight: 700;
-  font-family: "Lexend Mega", sans-serif;
-  line-height: 2.5rem;
-}
-p {
-  font-family: "Public Sans", sans-serif;
-  font-size: 1rem;
-}
-@media (max-width: 600px) {
+  .getting-started {
+    margin: 0.7rem 1.5rem;
+  }
   .sections {
-    margin: 1rem 2rem;
+    margin: 0.7rem 1.5rem;
   }
 }
