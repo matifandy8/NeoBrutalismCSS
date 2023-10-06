@@ -10,13 +10,14 @@ body {
   margin: auto;
 }
 
+/* Header Styles */
 header {
   color: #fff;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   font-family: "Public Sans", sans-serif;
 }
 
+/* Navigation Styles */
 nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -52,13 +53,13 @@ nav {
   text-decoration-line: underline;
 }
 
+/* Presentation Section Styles */
 .presentation {
   font-family: Proza Libre, sans-serif;
-  border-style: solid;
+  border: 4px solid #e5e7eb;
   display: flex;
   height: 85vh;
   border-radius: 1.5rem;
-  border-width: 4px;
   background-color: #ffc0cb;
   justify-content: center;
   align-items: center;
@@ -69,9 +70,6 @@ nav {
 .title {
   text-align: center;
   box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: #e5e7eb;
   margin: 0;
   font-weight: 700;
   font-family: "Lexend Mega", sans-serif;
@@ -83,66 +81,69 @@ nav {
   font-family: "Public Sans", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: #e5e7eb;
-  margin: 0;
-  margin: 3rem;
+  margin: 0 0 3rem;
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
+
+/* Highlighted Background Styles */
 .component-description {
 }
+
 .highlight {
   background-color: #f3f3f6;
 }
+
 pre {
   font-size: 1em;
   overflow-x: auto;
   padding: 1rem;
 }
+
 code {
   background: none;
   padding: 0;
 }
 
-button {
-  font-family: "Public Sans", sans-serif;
-  margin: 20px;
-}
-a {
-  font-family: "Public Sans", sans-serif;
-}
+/* Button and Link Styles */
+button,
+a,
 input {
   font-family: "Public Sans", sans-serif;
   margin: 20px;
 }
 
+/* Sections Styles */
 .sections {
   text-align: left;
   margin: 3rem 6rem;
 }
+
 .backgrounds div {
   width: 300px;
   margin: auto;
   padding: 10px;
 }
+
 h1 {
   font-weight: 700;
   font-family: "Lexend Mega", sans-serif;
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
   font-weight: 700;
   font-family: "Lexend Mega", sans-serif;
   line-height: 2rem;
 }
+
 p {
   font-family: "Public Sans", sans-serif;
   font-size: 1rem;
 }
 
+/* Container Styles */
 .container {
   display: flex;
   flex-direction: column;
@@ -150,6 +151,7 @@ p {
   align-items: center;
 }
 
+/* Getting Started Section Styles */
 .getting-started {
   text-align: left;
   margin: 3rem 6rem;
@@ -182,6 +184,7 @@ p {
   display: inline;
   margin-right: 20px;
 }
+
 .footer-links li a img {
   width: 50px;
 }
@@ -196,6 +199,7 @@ p {
   font-family: "Public Sans", sans-serif;
 }
 
+/* Media Queries */
 @media (max-width: 1250px) {
   .title {
     font-size: 4rem;
@@ -204,6 +208,7 @@ p {
     font-size: 2rem;
   }
 }
+
 @media (max-width: 768px) {
   .presentation {
     margin: 0;
