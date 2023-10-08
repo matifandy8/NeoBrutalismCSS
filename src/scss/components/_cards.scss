@@ -1,0 +1,42 @@
+.card {
+  width: 300px;
+  margin: 20px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.3s ease;
+  &:hover {
+    box-shadow: 3px 3px 0px #000000;
+    transform: translate(-6px, -6px);
+  }
+}
+
+.card a {
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.text-small {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-content div {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.card-content strong {
+  cursor: pointer;
+}
