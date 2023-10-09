@@ -123,7 +123,6 @@ input {
 
 .backgrounds div {
   width: 300px;
-  margin: auto;
   padding: 10px;
 }
 
@@ -149,14 +148,6 @@ h4 {
 p {
   font-family: "Public Sans", sans-serif;
   font-size: 1rem;
-}
-
-/* Container Styles */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Getting Started Section Styles */

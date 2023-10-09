@@ -1,0 +1,16 @@
+.avatar {
+  overflow: hidden;
+  width: 67px;
+  height: 67px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0 0 #031926;
+  img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
