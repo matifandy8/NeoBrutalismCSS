@@ -172,9 +172,12 @@ code {
 }
 
 /* Button and Link Styles */
-button,
-a,
-input {
+.nb-button,
+.nb-input {
+  font-family: "Public Sans", sans-serif;
+  margin: 20px;
+}
+a {
   font-family: "Public Sans", sans-serif;
   margin: 20px;
 }
