@@ -1,0 +1,30 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy Website
+        run: |
+          mkdir website_temp
+          cp -r website/* website_temp/
+          git checkout --orphan temp-branch
+          git reset -- *
+          mv website_temp/* ./
+          rm -r website_temp
+          git add .
+          git commit -m "Deploy website"
+          git branch -D main
+          git branch -m main
+          git push -f origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
