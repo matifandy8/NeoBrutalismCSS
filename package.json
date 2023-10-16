@@ -1,13 +1,13 @@
 {
-  "name": "neobrutalismccss",
-  "version": "1.0.0",
+  "name": "neobrutalismcss",
+  "version": "0.1.0",
   "description": "NeoBrutalismCSS is a cutting-edge and innovative user interface (UI) toolkit that combines the bold aesthetics of brutalist design with the elegance of neumorphism",
-  "main": "index.js",
+  "main": "dis/index.min.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/matifandy8/NeoBrutalismCSS"
   },
-  "homepage": "",
+  "homepage": "https://matifandy8.github.io/NeoBrutalismCSS/",
   "bugs": "https://github.com/matifandy8/NeoBrutalismCSS/issues",
   "scripts": {
     "compile-scss": "node-sass src/scss/index.scss dist/index.css",

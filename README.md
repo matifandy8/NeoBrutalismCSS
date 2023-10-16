@@ -1,6 +1,6 @@
 # NeoBrutalismCSS - Minimalist CSS Library
 
-![NeoBrutalismCSS Logo](website/assets/logo.png)
+![NeoBrutalismCSS Logo](https://i.ibb.co/RgzGnnZ/logo.png)
 
 **NeoBrutalismCSS** is a lightweight and minimalist CSS library inspired by the principles of brutalist web design. It provides a set of simple and modular CSS classes to help you create brutalist-style web pages with ease.
 
@@ -41,7 +41,7 @@ $ yarn add neobrutalismcss
 Include the following CSS link in the `<head>` section of your HTML file:
 
 ```html
-<link rel="stylesheet" href="https://example.com/neobrutalism.css" />
+<link rel="stylesheet" href="https://unpkg.com/neobrutalismcss@latest" />
 
 2.Download the latest release and include it in your project manually.
 ```
@@ -66,7 +66,7 @@ These fonts can help you achieve a harmonious and visually appealing typography 
 NeoBrutalismCSS only provides components. You will need to define your own layout.
 
 To use NeoBrutalismCSS, simply add the CSS classes to your HTML elements.
-Here's an example:
+Here docs - [WEB](https://matifandy8.github.io/NeoBrutalismCSS/)
 
 ## CSS Only
 
