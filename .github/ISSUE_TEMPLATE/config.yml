@@ -2,7 +2,7 @@ blank_issues_enabled: true
 contact_links:
   - name: Questions
     url: https://github.com/matifandy8/NeoBrutalismCSS/discussions
-    about: You can join the discussions on Discord.
+    about: You can join the discussions to get help.
   - name: Login does not work
     url: https://github.com/matifandy8/NeoBrutalismCSS/blob/main/.github/CONTRIBUTING.md
     about: Before opening a new issue, please make sure to read CONTRIBUTING.md
