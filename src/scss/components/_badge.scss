@@ -1,0 +1,23 @@
+.badge {
+  width: fit-content;
+  padding: 5px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  background-color: #40d39c;
+  box-shadow: 3px 3px 0 0 #000;
+
+  .badge-inner {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 50px;
+    .badge-text {
+      color: #031926;
+      padding: 10px;
+      margin: 0;
+    }
+  }
+}

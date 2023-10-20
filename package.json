@@ -1,6 +1,6 @@
 {
   "name": "neobrutalismcss",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "NeoBrutalismCSS design framework that embraces the aesthetics of neo-brutalism in web",
   "main": "dist/index.min.css",
   "repository": {
