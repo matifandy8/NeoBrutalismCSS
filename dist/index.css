@@ -758,3 +758,47 @@ input[type="checkbox"]:checked ~ .modal-background {
       cursor: pointer; }
       .modal-header label:hover img {
         opacity: 0.6; }
+
+.alert.success {
+  background-color: #92fca2;
+  border: 1px solid #40d39c;
+  padding: 0.1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 0px black; }
+
+.alert.error {
+  background-color: #ffc5c8;
+  border: 1px solid #dc341e;
+  padding: 0.1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 0px black; }
+
+.alert.warning {
+  background-color: #f8f894;
+  border: 1px solid #fdfd96;
+  padding: 0.1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 0px black; }
+
+.alert.info {
+  background-color: #d5f0ff;
+  border: 1px solid #b9e2f8;
+  padding: 0.1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 0px black; }
