@@ -27,7 +27,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #aaaaaa; }
   .nb-button.default:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.default.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -51,7 +51,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #d64b2b; }
   .nb-button.orange:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.orange.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -75,7 +75,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #005785; }
   .nb-button.blue:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.blue.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -99,7 +99,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #30ac7e; }
   .nb-button.green:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.green.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -123,7 +123,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #91bed6; }
   .nb-button.sky-blue:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.sky-blue.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -147,7 +147,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #ffb2b2; }
   .nb-button.pale-red:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.pale-red.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -171,7 +171,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #b482c9; }
   .nb-button.pale-violet:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.pale-violet.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -195,7 +195,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #378589; }
   .nb-button.soft-blue:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.soft-blue.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -219,7 +219,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #a0e5d7; }
   .nb-button.pale-cyan:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.pale-cyan.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -243,7 +243,7 @@ html {
     box-shadow: 3px 3px 0px #000000;
     background-color: #fcfc7e; }
   .nb-button.pale-yellow:focus {
-    outline: none; }
+    outline-color: transparent; }
   .nb-button.pale-yellow.disabled {
     background-color: #ccc;
     cursor: not-allowed; }
@@ -267,7 +267,7 @@ html {
   .nb-input.default:hover {
     background-color: #aaaaaa; }
   .nb-input.default:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #aaaaaa; }
   .nb-input.default.disabled {
     background-color: #ccc;
@@ -293,7 +293,7 @@ html {
   .nb-input.orange:hover {
     background-color: #d64b2b; }
   .nb-input.orange:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #d64b2b; }
   .nb-input.orange.disabled {
     background-color: #ccc;
@@ -319,7 +319,7 @@ html {
   .nb-input.blue:hover {
     background-color: #005785; }
   .nb-input.blue:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #005785; }
   .nb-input.blue.disabled {
     background-color: #ccc;
@@ -345,7 +345,7 @@ html {
   .nb-input.green:hover {
     background-color: #30ac7e; }
   .nb-input.green:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #30ac7e; }
   .nb-input.green.disabled {
     background-color: #ccc;
@@ -371,7 +371,7 @@ html {
   .nb-input.sky-blue:hover {
     background-color: #91bed6; }
   .nb-input.sky-blue:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #91bed6; }
   .nb-input.sky-blue.disabled {
     background-color: #ccc;
@@ -397,7 +397,7 @@ html {
   .nb-input.pale-red:hover {
     background-color: #ffb2b2; }
   .nb-input.pale-red:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #ffb2b2; }
   .nb-input.pale-red.disabled {
     background-color: #ccc;
@@ -423,7 +423,7 @@ html {
   .nb-input.pale-violet:hover {
     background-color: #b482c9; }
   .nb-input.pale-violet:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #b482c9; }
   .nb-input.pale-violet.disabled {
     background-color: #ccc;
@@ -449,7 +449,7 @@ html {
   .nb-input.soft-blue:hover {
     background-color: #378589; }
   .nb-input.soft-blue:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #378589; }
   .nb-input.soft-blue.disabled {
     background-color: #ccc;
@@ -475,7 +475,7 @@ html {
   .nb-input.pale-cyan:hover {
     background-color: #a0e5d7; }
   .nb-input.pale-cyan:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #a0e5d7; }
   .nb-input.pale-cyan.disabled {
     background-color: #ccc;
@@ -501,7 +501,7 @@ html {
   .nb-input.pale-yellow:hover {
     background-color: #fcfc7e; }
   .nb-input.pale-yellow:focus {
-    outline: none;
+    outline-color: transparent;
     border-color: #fcfc7e; }
   .nb-input.pale-yellow.disabled {
     background-color: #ccc;
