@@ -703,11 +703,11 @@ input.nb-checkbox {
       padding: 10px;
       margin: 0; }
 
-input[type="checkbox"] {
+#modal {
   display: none; }
 
-input[type="checkbox"]:checked ~ .modal,
-input[type="checkbox"]:checked ~ .modal-background {
+#modal:checked ~ .modal,
+#modal:checked ~ .modal-background {
   display: block; }
 
 .modal-background {
