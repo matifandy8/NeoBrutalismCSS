@@ -1,0 +1,33 @@
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.accordion {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 0px black;
+    border: 1px solid black;
+    &-label {
+        display: flex;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    &-content {
+        max-height: 0;
+        padding: 0 1em;
+        background: white;
+        transition: all 0.35s;
+    }
+}
+
+.accordion-tab:checked {
+    ~.accordion-content {
+        max-height: 100vh;
+        padding: 1em;
+    }
+}
