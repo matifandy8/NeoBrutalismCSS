@@ -802,7 +802,7 @@ input.nb-checkbox {
   font-weight: bold;
   box-shadow: 2px 2px 0px black; }
 
-input {
+.accordion-tab {
   position: absolute;
   opacity: 0;
   z-index: -1; }
