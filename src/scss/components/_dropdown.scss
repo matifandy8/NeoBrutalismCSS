@@ -1,0 +1,29 @@
+.dropdown {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 0px black;
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+
+  &::after {
+    content: '\25BC'; 
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  option {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 2px 2px 0px black;
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  &:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+  }
+}
