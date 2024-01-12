@@ -510,6 +510,15 @@ html {
     opacity: 1;
     text-align: left; }
 
+.text-black {
+  color: #000000; }
+
+.text-white {
+  color: #ffffff; }
+
+.text-red {
+  color: #dc341e; }
+
 .text-orange {
   color: #ff5733; }
 
@@ -536,6 +545,15 @@ html {
 
 .text-pale-yellow {
   color: #fdfd96; }
+
+.bg-black {
+  background-color: #000000; }
+
+.bg-white {
+  background-color: #ffffff; }
+
+.bg-red {
+  background-color: #dc341e; }
 
 .bg-orange {
   background-color: #ff5733; }
@@ -687,7 +705,6 @@ input.nb-checkbox {
   padding: 5px;
   border: 2px solid #000;
   border-radius: 50px;
-  background-color: #40d39c;
   box-shadow: 3px 3px 0 0 #000; }
   .badge .badge-inner {
     display: flex;
@@ -698,7 +715,6 @@ input.nb-checkbox {
     border: 2px solid #000;
     border-radius: 50px; }
     .badge .badge-inner .badge-text {
-      color: #031926;
       padding: 10px;
       margin: 0; }
 
