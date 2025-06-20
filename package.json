@@ -1,8 +1,9 @@
 {
   "name": "neobrutalismcss",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "NeoBrutalismCSS design framework that embraces the aesthetics of neo-brutalism in web",
   "main": "dist/index.min.css",
+  "style": "dist/index.min.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/matifandy8/NeoBrutalismCSS"
@@ -10,12 +11,21 @@
   "homepage": "https://matifandy8.github.io/NeoBrutalismCSS/",
   "bugs": "https://github.com/matifandy8/NeoBrutalismCSS/issues",
   "scripts": {
-    "compile-scss": "node-sass src/scss/index.scss dist/index.css",
-    "watch-scss": "node-sass --watch src/scss/index.scss dist/index.css",
-    "minify-css": "node-sass src/scss/index.scss dist/index.min.css --output-style compressed",
+    "compile-scss": "sass src/scss/index.scss dist/index.css",
+    "watch-scss": "sass --watch src/scss/index.scss:dist/index.css",
+    "minify-css": "sass src/scss/index.scss dist/index.min.css --style=compressed",
     "build": "npm run compile-scss && npm run minify-css",
-    "start": "npm run watch-scss"
+    "start": "npm run watch-scss",
+    "prepublishOnly": "npm run build",
+    "release:patch": "npm version patch && git push --follow-tags && npm publish",
+    "release:minor": "npm version minor && git push --follow-tags && npm publish",
+    "release:major": "npm version major && git push --follow-tags && npm publish"
   },
+  "files": [
+  "dist",
+  "README.md",
+  "LICENSE"
+  ],
   "keywords": [
     "bootstrap",
     "css",
@@ -40,6 +50,6 @@
   "author": "Matias Fandiño",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "sass": "^1.89.2"
   }
 }
