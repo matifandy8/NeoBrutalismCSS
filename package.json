@@ -1,6 +1,6 @@
 {
   "name": "neobrutalismcss",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "NeoBrutalismCSS design framework that embraces the aesthetics of neo-brutalism in web",
   "main": "dist/index.min.css",
   "style": "dist/index.min.css",
@@ -22,9 +22,9 @@
     "release:major": "npm version major && git push --follow-tags && npm publish"
   },
   "files": [
-  "dist",
-  "README.md",
-  "LICENSE"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "keywords": [
     "bootstrap",
