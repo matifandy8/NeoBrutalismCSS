@@ -1,6 +1,6 @@
 # NeoBrutalismCSS - Minimalist CSS Library
 
-![NeoBrutalismCSS Logo](https://i.ibb.co/RgzGnnZ/logo.png)
+![NeoBrutalismCSS Logo](https://i.ibb.co/dwxRjC64/nb-logo.png)
 
 **NeoBrutalismCSS** is a lightweight and minimalist CSS library inspired by the principles of neo-brutalist web design. It provides a set of simple and modular CSS classes to help you create brutalist-style web pages with ease.
 
