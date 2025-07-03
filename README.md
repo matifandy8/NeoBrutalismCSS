@@ -1,6 +1,8 @@
 # NeoBrutalismCSS - Minimalist CSS Library
 
-![NeoBrutalismCSS Logo](https://i.ibb.co/RgzGnnZ/logo.png)
+![NeoBrutalismCSS Logo](https://i.ibb.co/dwxRjC64/nb-logo.png)
+
+[![Contributors](https://img.shields.io/github/contributors/matifandy8/NeoBrutalismCSS.svg)](https://github.com/matifandy8/NeoBrutalismCSS/graphs/contributors)
 
 **NeoBrutalismCSS** is a lightweight and minimalist CSS library inspired by the principles of neo-brutalist web design. It provides a set of simple and modular CSS classes to help you create brutalist-style web pages with ease.
 
@@ -41,10 +43,14 @@ $ yarn add neobrutalismcss
 Include the following CSS link in the `<head>` section of your HTML file:
 
 ```html
+<!-- Option 1: unpkg CDN (always latest version) -->
 <link rel="stylesheet" href="https://unpkg.com/neobrutalismcss@latest" />
 
-2.Download the latest release and include it in your project manually.
+<!-- Option 2: jsDelivr CDN (specific version, or latest from GitHub) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/matifandy8/NeoBrutalismCSS/dist/index.min.css" />
 ```
+
+You can use either CDN. The unpkg link always points to the latest published npm version, while the jsDelivr link fetches the latest build from the GitHub repository (or you can specify a version/tag for more control).
 
 ## Fonts
 
