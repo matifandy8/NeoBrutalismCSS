@@ -29,24 +29,31 @@
     <link rel="icon" sizes="32x32" href="assets/logo.png" type="image/x-icon">
     <link rel="icon" sizes="16x16" href="assets/logo.png" type="image/x-icon">
     <link rel="icon" href="assets/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/neobrutalismcss@latest">
-    <!-- for dev -->
-    <!-- <link rel="stylesheet" href="/dist/index.css" /> -->
-    <!--  -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@700&family=Public+Sans&display=swap"
         rel="stylesheet" />
+
+        <script>
+            const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = isLocal
+              ? '/dist/index.css'
+              : 'https://cdn.jsdelivr.net/gh/matifandy8/NeoBrutalismCSS/dist/index.min.css';
+            document.head.appendChild(link);
+          </script>
 </head>
 
 <body>
     <header>
         <nav id="top">
             <div class="logo">
-                <img src="assets/logo-with-text.png" alt="logo" />
+                <a href="index.html"><img src="assets/logo-with-text.png" alt="logo" /></a>
             </div>
             <ul class="nav-links">
+                <li><a href="docs.html">Docs</a></li>
                 <li>
                     <a href="https://github.com/matifandy8/NeoBrutalismCSS" target="_blank">
                         <img src="assets/github.svg" alt="GitHub"></a>
@@ -59,7 +66,8 @@
         <p class="description">
             Design framework that embraces the aesthetics of neo-brutalism in web
         </p>
-        <a href="#started" class="nb-button blue">Getting Started</a>
+        <p class="catchy-copy">NeobrutalismCSS weighs less than 100KB. Lightweight, fast, and brutal.</p>
+        <a href="docs.html" class="nb-button blue">Getting Started</a>
     </section>
     <main>
         <section id="started" class="getting-started">
@@ -75,12 +83,14 @@
                         <pre><button class="copy tooltip copy-button" data-section="buttons"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button><code class="language-bash" data-lang="bash"><span class="name">npm</span> <span class="name">install </span><span class="name">neobrutalismcss</span></code></pre>
                     </figure>
 
-                    <p><strong>or Include CSS:</strong> Include the NeoBrutalismCSS stylesheet in the `
-
-                        <head>` section of your HTML document:
+                    <p><strong>Include CSS:</strong> Include the NeoBrutalismCSS stylesheet in the <code>&lt;head&gt;</code> section of your HTML document:</p>
                     </p>
                     <figure class="highlight">
                         <pre><button class="copy tooltip copy-button" data-section="buttons"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button><code class="language-bash" data-lang="bash"><span class="tag">&lt;link</span> <span class="class">rel=</span><span class="name">"stylesheet"</span> <span class="class">href=</span><span class="name">"https://unpkg.com/neobrutalismcss@latest"</span> <span class="tag">/&gt;</span></code></pre>
+                    </figure>
+                    <p>or using CDN:</p>
+                    <figure class="highlight">
+                        <pre><button class="copy tooltip copy-button" data-section="buttons"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button><code class="language-bash" data-lang="bash"><span class="tag">&lt;link</span> <span class="class">rel=</span><span class="name">"stylesheet"</span> <span class="class">href=</span><span class="name">"https://cdn.jsdelivr.net/gh/matifandy8/NeoBrutalismCSS/dist/index.min.css"</span> <span class="tag">/&gt;</span></code></pre>
                     </figure>
                 </li>
                 <li>
@@ -97,432 +107,6 @@
                 NeoBrutalismCSS.
             </p>
         </section>
-        <section class="sections">
-            <h2>Docs</h2>
-            <p class="component-description">
-                NeoBrutalismCSS is designed with simplicity in mind. Say goodbye to the complexities of learning
-                numerous class names found in other frameworks. Instead, it follows a minimalist approach by applying
-                fundamental styles based on HTML semantics.
-            </p>
-            <p class="component-description">
-                Embrace a streamlined, no-frills approach to web design with NeoBrutalismCSS and start creating modern,
-                neo-brutalist aesthetics with ease.
-            </p>
-            <p class="component-description">
-                NeoBrutalismCSS doesn't provide any fonts, but we do maintain the following list of fonts that we
-                recommend for usage alongside our framework for your convenience: Stint Ultra Expanded, Proza Libre,
-                Lexend Mega and Public Sans
-            </p>
-        </section>
-        <section class="sections">
-            <h2>Components</h2>
-        </section>
-
-        <section class="sections">
-            <h3>Buttons</h3>
-            <p class="component-description">
-                Section showcases different button styles offered by NeoBrutalismCSS, including default,
-                orange, blue, and green buttons.
-            </p>
-            <button class="nb-button default">Click Here</button>
-            <button class="nb-button orange">Click Here</button>
-            <button class="nb-button blue">Click Here</button>
-            <button class="nb-button green">Click Here</button>
-            <hr>
-            <button class="nb-button default rounded">Click Here</button>
-            <button class="nb-button orange rounded">Click Here</button>
-            <button class="nb-button blue rounded">Click Here</button>
-            <button class="nb-button green rounded">Click Here</button>
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button" data-section="buttons"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html" >
-    <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button default"</span>&gt; Click Here <span class="tag">&lt;/button&gt;</span>
-    <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button orange"</span>&gt; Click Here <span class="tag">&lt;/button&gt;</span>
-    <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button blue"</span>&gt; Click Here <span class="tag">&lt;/button&gt;</span>
-    <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button green"</span>&gt; Click Here <span class="tag">&lt;/button&gt;</span>
-
-    <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button default rounded"</span>&gt; Click Here <span class="tag">&lt;/button&gt;</span>
-    <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button orange rounded"</span>&gt; Click Here <span class="tag">&lt;/button&gt;</span>
-    <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button blue rounded"</span>&gt; Click Here <span class="tag">&lt;/button&gt;</span>
-    <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button green rounded"</span>&gt; Click Here <span class="tag">&lt;/button&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-        </section>
-        <section class="sections">
-            <h3>Inputs</h3>
-            <p class="component-description">
-                Section demonstrates various input field styles, including default, orange, blue, and green
-                inputs, provided by NeoBrutalismCSS.
-            </p>
-            <input type="text" class="nb-input default" placeholder="Text" />
-            <input type="text" class="nb-input orange" placeholder="Text" />
-            <input type="password" class="nb-input blue" placeholder="Password" />
-            <input type="email" class="nb-input green" placeholder="Email@example.com" />
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html">
-    <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"nb-input default"</span> placeholder=<span class="name">"Text"</span> <span class="tag">/&gt;</span>
-    <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"nb-input orange"</span> placeholder=<span class="name">"Text"</span> <span class="tag">/&gt;</span>
-    <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"nb-input blue"</span> placeholder=<span class="name">"Password"</span> <span class="tag">/&gt;</span>
-    <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"nb-input green"</span> placeholder=<span class="name">"Email@example.com"</span> <span class="tag">/&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-        </section>
-        <section class="sections">
-            <h3>Checkbox</h3>
-            <p class="component-description">
-                Section showcases checkbox style provided by NeoBrutalismCSS.
-            </p>
-            <div class="dialog">
-                <label class="nb-label">Bike
-                    <input type="checkbox" id="vehicle1" class="nb-checkbox" name="vehicle1" value="Bike">
-                </label>
-                <label class="nb-label">Car
-                    <input type="checkbox" id="vehicle2" class="nb-checkbox" name="vehicle2" value="Car">
-                </label>
-                <label class="nb-label">Boat
-                    <input type="checkbox" id="vehicle3" class="nb-checkbox" name="vehicle3" value="Boat">
-                </label>
-            </div>
-            <figure class="highlight">
-                <pre>
-                    <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                    <code class="language-html" data-lang="html">
-<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"dialog"</span><span class="tag">&gt;</span>
-  <span class="tag">&lt;label</span> <span class="class">class=</span><span class="name">"nb-label"</span>&gt;Bike
-    <span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"checkbox"</span> id=<span class="name">"vehicle1"</span> <span class="class">class=</span><span class="name">"nb-checkbox"</span> <span class="class">name=</span><span class="name">"vehicle1"</span> <span class="class">value=</span><span class="name">"Bike"</span>&gt;
-  <span class="tag">&lt;/label&gt;</span>
-  <span class="tag">&lt;label</span> <span class="class">class=</span><span class="name">"nb-label"</span>&gt;Car
-     <span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"checkbox"</span> id=<span class="name">"vehicle2"</span> <span class="class">class=</span><span class="name">"nb-checkbox"</span> <span class="class">name=</span><span class="name">"vehicle2"</span> <span class="class">value=</span><span class="name">"Car"</span>&gt;
-  <span class="tag">&lt;/label&gt;</span>
-      <span class="tag">&lt;label</span> <span class="class">class=</span><span class="name">"nb-label"</span>&gt;Boat
-      <span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"checkbox"</span> id=<span class="name">"vehicle3"</span> <span class="class">class=</span><span class="name">"nb-checkbox"</span> <span class="class">name=</span><span class="name">"vehicle3"</span> <span class="class">value=</span><span class="name">"Boat"</span>&gt;
-  <span class="tag">&lt;/label&gt;</span>
-<span class="tag">&lt;/div&gt;</span>
-                    </code>
-                </pre>
-            </figure>
-
-        </section>
-        <section class="sections">
-            <h3>Card</h3>
-            <p class="component-description">
-                Section presents a card with text content and image. It illustrates a user interface
-                component provided by NeoBrutalismCSS for cards.
-            </p>
-            <div class="card">
-                <a href="https://example.com">
-                    <div class="card-thumbnail">
-                        <img src="assets/card-img.svg" loading="lazy" alt="Explore NeoBrutalismCSS"
-                            class="card-thumbnail">
-                    </div>
-                    <div class="card-content">
-                        <div class="text-small">October 8, 2023</div>
-                        <p><strong>Explore NeoBrutalismCSS: A Revolutionary library</strong></p>
-                        <p>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform your
-                            life.</p>
-                        <p><strong>Learn More -&gt;</strong></p>
-                    </div>
-                </a>
-            </div>
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html">
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"card"</span><span class="tag">&gt;</span>
-      <span class="tag">&lt;a </span><span class="class">href=</span><span class="name">"https://example.com"</span><span class="tag">&gt;</span>
-         <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"card-thumbnail"</span><span class="tag">&gt;</span>
-            <span class="tag">&lt;img</span> <span class="class">src=</span><span class="name">"assets/card-img.svg"</span> <span class="class">loading=</span><span class="name">"lazy"</span> <span class="class">alt=</span><span class="name">"Explore NeoBrutalismCSS"</span> <span class="class">class=</span><span class="name">"card-thumbnail"</span><span class="tag">/&gt;</span>
-          <span class="tag">&lt;/div&gt;</span>
-          <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"card-content"</span><span class="tag">&gt;</span>
-             <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"text-small"</span><span class="tag">&gt;</span>October 8, 2023<span class="tag">&lt;/div&gt;</span>
-                    <span class="tag">&lt;p&gt;</span>
-                        <span class="tag">&lt;strong&gt;</span>Explore NeoBrutalismCSS: A Revolutionary library<span class="tag">&lt;/strong&gt;</span>
-                    <span class="tag">&lt;/p&gt;</span>
-                    <span class="tag">&lt;p&gt;</span>Unveil the future of NeoBrutalism with our groundbreaking approach that will transform your life.<span class="tag">&lt;/p&gt;</span>
-                    <span class="tag">&lt;p&gt;</span><span class="tag">&lt;strong&gt;</span>Learn More -&gt;<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;/p&gt;</span>
-             <span class="tag">&lt;/div&gt;</span>
-        <span class="tag">&lt;/a&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-        </section>
-        <section class="sections">
-            <h3>Badge</h3>
-            <p class="component-description">
-                Section presents a badge with text. It illustrates a user interface component
-                provided by NeoBrutalismCSS for badges.
-            </p>
-            <div class="badge bg-orange text-white">
-                <div class="badge-inner">
-                    <p class="badge-text">Excellence</p>
-                </div>
-            </div>
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html"> 
-<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"badge bg-orange text-white"</span><span class="tag">&gt;</span>
-    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"badge-inner"</span><span class="tag">&gt;</span>
-        <span class="tag">&lt;p</span> <span class="class">class=</span><span class="name">"badge-text"</span><span class="tag">&gt;</span>Excellence<span class="tag">&lt;/p&gt;</span>
-    <span class="tag">&lt;/div&gt;</span>
-<span class="tag">&lt;/div&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-
-
-        </section>
-        <section class="sections">
-            <h3>Dialog</h3>
-            <p class="component-description">
-                Section presents a dialog box with text content and buttons. It illustrates a user
-                interface component provided by NeoBrutalismCSS for dialogs and pop-ups.
-            </p>
-            <div class="dialog">
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                    officiis officia, nulla commodi repellat modi ab et ea! Excepturi molestiae voluptatibus
-                    voluptatum</p>
-                <p>Not sure how I feel about it</p>
-                <div class="button-container">
-                    <button class="nb-button default">Cancel</button>
-                    <button class="nb-button green">Save</button>
-                </div>
-            </div>
-
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html">
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"dialog"</span><span class="tag">&gt;</span>
-      <span class="tag">&lt;p&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-      officiis officia, nulla commodi repellat modi ab et ea! Excepturi molestiae voluptatibus
-      voluptatum<span class="tag">&lt;/p&gt;</span>
-      <span class="tag">&lt;p&gt;</span>Not sure how I feel about it<span class="tag">&lt;/p&gt;</span>
-      <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"button-container"</span><span class="tag">&gt;</span>
-         <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button default"</span><span class="tag">&gt;</span>Cancel<span class="tag">&lt;/button&gt;</span>
-         <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button green"</span><span class="tag">&gt;</span>Save<span class="tag">&lt;/button&gt;</span>
-      <span class="tag">&lt;/div&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-        </section>
-        <section class="sections">
-            <h3>Marquee</h3>
-            <p class="component-description">
-                Section demonstrates a marquee component provided by NeoBrutalismCSS.
-            </p>
-            <div class="marquee">
-                <div class="marquee-content">
-                    <span>Item 1</span>
-                    <span>Item 2</span>
-                    <span>Item 3</span>
-                    <span>Item 4</span>
-                    <span>Item 5</span>
-                </div>
-            </div>
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html">
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"marquee"</span><span class="tag">&gt;</span>
-      <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"marquee-content"</span><span class="tag">&gt;</span>
-         <span class="tag">&lt;span&gt;</span>Item 1<span class="tag">&lt;/span&gt;</span>
-         <span class="tag">&lt;span&gt;</span>Item 2<span class="tag">&lt;/span&gt;</span>
-         <span class="tag">&lt;span&gt;</span>Item 3<span class="tag">&lt;/span&gt;</span>
-         <span class="tag">&lt;span&gt;</span>Item 4<span class="tag">&lt;/span&gt;</span>
-         <span class="tag">&lt;span&gt;</span>Item 5<span class="tag">&lt;/span&gt;</span>
-      </span><span class="tag">&lt;/div&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-        </section>
-        <section class="sections">
-            <h3>Avatar</h3>
-            <p class="component-description">
-                Section demonstrates an avatar component provided by NeoBrutalismCSS.
-            </p>
-            <div class="avatar bg-pale-red">
-                <img src="assets/avatar-1.png" alt="Avatar" />
-            </div>
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html">
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"avatar bg-pale-red"</span><span class="tag">&gt;</span>
-      <span class="tag">&lt;img</span> src=<span class="name">"assets/avatar-1.png"</span> alt=<span class="name">"Avatar"</span> <span class="tag">/&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-        </section>
-        <section class="sections">
-            <h3>Modal</h3>
-            <p class="component-description">
-                Section demonstrates a modal component provided by NeoBrutalismCSS.
-            </p>
-            <input type="checkbox" id="modal">
-            <label for="modal" class="nb-button rounded green">Open Modal</label>
-            <label for="modal" class="modal-background"></label>
-            <div class="modal dialog">
-                <div class="modal-header">
-                    <h3>Modal Title</h3>
-                    <label for="modal">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAABNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU0N3NIOAAAAJnRSTlMAAQIDBAUGBwgRFRYZGiEjQ3l7hYaqtLm8vsDFx87a4uvv8fP1+bbY9ZEAAAB8SURBVBhXXY5LFoJAAMOCIP4VBRXEv5j7H9HFDOizu2TRFljedgCQHeocWHVaAWStXnKyl2oVWI+kd1XLvFV1D7Ng3qrWKYMZ+MdEhk3gbhw59KvlH0eTnf2mgiRwvQ7NW6aqNmncukKhnvo/zzlQ2PR/HgsAJkncH6XwAcr0FUY5BVeFAAAAAElFTkSuQmCC"
-                            width="16" height="16" alt="">
-                    </label>
-                </div>
-                <p>Content for the modal</p>
-            </div>
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html"> 
-   <span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"checkbox"</span> <span class="class">id=</span><span class="name">"modal"</span><span class="tag">&gt;</span>
-   <span class="tag">&lt;label</span> <span class="class">for=</span><span class="name">"modal"</span> <span class="class">class=</span><span class="name">"nb-button rounded green"</span>&gt;Open Modal<span class="tag">&lt;/label&gt;</span>
-   <span class="tag">&lt;label</span> <span class="class">for=</span><span class="name">"modal"</span> <span class="class">class=</span><span class="name">"modal-background"</span><span class="tag">&gt;&lt;/label&gt;</span>
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"modal dialog"</span>&gt;</span>
-      <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"modal-header"</span>&gt;</span>
-         <span class="tag">&lt;h3&gt;</span> Modal Title<span class="tag">&lt;/h3&gt;</span>
-         <span class="tag">&lt;label</span> <span class="class">for=</span><span class="name">"modal"</span> <span class="class">class=</span><span class="name">"close"</span><span class="tag">&gt;&lt;/label&gt;</span>
-      <span class="tag">&lt;/div&gt;</span>
-      <span class="tag">&lt;p&gt;</span>Content for the modal<span class="tag">&lt;/p&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-        </section>
-
-        <section class="sections">
-            <h3>Alert</h3>
-            <p class="component-description">
-                Section demonstrates an alert component provided by NeoBrutalismCSS.
-            </p>
-            <div class="alert success">
-                <p>This is a success alert</p>
-            </div>
-            <div class="alert error">
-                <p>This is a danger alert</p>
-            </div>
-            <div class="alert warning">
-                <p>This is a warning alert</p>
-            </div>
-            <div class="alert info">
-                <p>This is an info alert</p>
-            </div>
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-                  <code class="language-html" data-lang="html">
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"alert success"</span><span class="tag">&gt;</span>
-      <span class="tag">&lt;p&gt;</span>This is a success alert<span class="tag">&lt;/p&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"alert error"</span><span class="tag">&gt;</span>
-      <span class="tag">&lt;p&gt;</span>This is a danger alert<span class="tag">&lt;/p&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"alert warning"</span><span class="tag">&gt;</span>
-      <span class="tag">&lt;p&gt;</span>This is a warning alert<span class="tag">&lt;/p&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-   <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"alert info"</span><span class="tag">&gt;</span>
-      <span class="tag">&lt;p&gt;</span>This is an info alert<span class="tag">&lt;/p&gt;</span>
-   <span class="tag">&lt;/div&gt;</span>
-                  </code>
-                </pre>
-            </figure>
-        </section>
-        <section class="sections">
-            <h3>Accordion</h3>
-            <p class="component-description">
-                Section demonstrates an accordion component provided by NeoBrutalismCSS.
-            </p>
-
-            <div class="accordion">
-                <input type="checkbox" id="tab1" class="accordion-tab">
-                <label class="accordion-label bg-blue" for="tab1">Item 1</label>
-                <div class="accordion-content">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
-                </div>
-            </div>
-
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-<code class="language-html" data-lang="html"><span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"accordion"</span><span class="tag">&gt;</span>
-       <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"accordion-tab"</span> type=<span class="name">"checkbox"</span> id=<span class="name">"tab1"</span> <span class="tag">/&gt;</span>
-       <span class="tag">label </span> <span class="class">class=</span><span class="name">"accordion-label bg-blue"</span> <span class="class">for=</span><span class="name">"tab1"</span><span class="tag">&gt;</span>Item 1<span class="tag">&lt;/label&gt;</span>
-       <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"accordion-content"</span><span class="tag">&gt;</span>
-       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
-       <span class="tag">&lt;/div&gt;</span>
-<span class="tag">&lt;/div&gt;</span></code>
-                </pre>
-            </figure>
-        </section>
-
-        <section class="sections">
-            <h3>Dropdown</h3>
-            <p class="component-description">
-                Section demonstrates an dropdown component provided by NeoBrutalismCSS.
-            </p>
-            <select class="dropdown">
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
-
-            <figure class="highlight">
-                <pre>
-                  <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
-<code class="language-html" data-lang="html"><span class="tag">&lt;select</span> <span class="class">class=</span><span class="name">"dropdown"</span><span class="tag">&gt;</span>
-   <span class="tag">&lt;option</span> <span class="class">value=</span><span class="name">"option1"</span><span class="tag">&gt;</span>Option 1<span class="tag">&lt;/option&gt;</span>
-   <span class="tag">&lt;option</span> <span class="class">value=</span><span class="name">"option2"</span><span class="tag">&gt;</span>Option 2<span class="tag">&lt;/option&gt;</span>
-   <span class="tag">&lt;option</span> <span class="class">value=</span><span class="name">"option3"</span><span class="tag">&gt;</span>Option 3<span class="tag">&lt;/option&gt;</span>
-<span class="tag">&lt;/select&gt;</span></code>
-                </pre>
-            </figure>
-        </section>
-            
-        
-        <section class="sections backgrounds">
-            <h3>Colors</h3>
-            <p class="component-description">
-                Section, you can see different colored background elements with their respective color
-                names. NeoBrutalismCSS offers a range of background colors.
-            </p>
-            <div class="bg-orange">
-                <p>#ff5733 orange</p>
-            </div>
-            <div class="bg-blue">
-                <p>#0077b6 blue</p>
-            </div>
-            <div class="bg-green">
-                <p>#40d39c green</p>
-            </div>
-            <div class="bg-sky-blue">
-                <p>#b9e2f8 sky-blue</p>
-            </div>
-            <div class="bg-pale-red">
-                <p>#ffc5c8 pale-red</p>
-            </div>
-            <div class="bg-pale-violet">
-                <p>#bc98cb pale-violet</p>
-            </div>
-            <div class="bg-soft-blue">
-                <p>#4799ae soft-blue</p>
-            </div>
-            <div class="bg-pale-cyan">
-                <p>#b9e7de pale-cyan</p>
-            </div>
-            <div class="bg-pale-yellow">
-                <p>#fdfd96 pale-yellow</p>
-            </div>
-        </section>
     </main>
     <footer class="site-footer">
         <div class="footer-content">
@@ -538,7 +122,6 @@
             </div>
         </div>
         <div class="footer-buttons">
-            <a href="#top" class="nb-button blue"><i class="fas fa-arrow-up"></i> Back to top</a>
             <a href="https://github.com/matifandy8/NeoBrutalismCSS/issues" target="_blank" class="nb-button blue"><i
                     class="fas fa-bug"></i> Report an issue</a>
         </div>

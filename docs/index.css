@@ -1,0 +1,629 @@
+/* Reset and Base Styles */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 1rem;
+  font-family: "Public Sans", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header and Navigation */
+header {
+  color: #fff;
+  padding: 1rem 0;
+  font-family: "Public Sans", sans-serif;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo img {
+  max-width: 280px;
+  height: auto;
+  transition: max-width 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.nav-links a:hover {
+  text-decoration-line: underline;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-links img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.nav-links img:hover {
+  transform: scale(1.1);
+}
+
+/* Presentation Section */
+.presentation {
+  position: relative;
+  background: #ffe600;
+  border: 4px solid #111;
+  box-shadow: 12px 12px 0 #111;
+  padding: 3rem 2rem 4rem 2rem;
+  margin: 2rem auto 3rem auto;
+  max-width: 1200px;
+  border-radius: 1.5rem;
+  text-align: center;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.presentation::before,
+.presentation::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.18;
+}
+
+.presentation::before {
+  width: 160px;
+  height: 160px;
+  background: #40d39c;
+  top: -60px;
+  left: -80px;
+}
+
+.presentation::after {
+  width: 100px;
+  height: 100px;
+  background: #0077b6;
+  bottom: -40px;
+  right: -50px;
+}
+
+.title {
+  position: relative;
+  z-index: 2;
+  font-family: "Lexend Mega", sans-serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 1.2rem;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: clamp(60px, 15vw, 90px);
+  height: clamp(8px, 2vw, 14px);
+  background: #40d39c;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.description {
+  font-size: clamp(1.2rem, 4vw, 1.7rem);
+  color: #222;
+  margin-bottom: 1.5rem;
+  font-family: "Public Sans", sans-serif;
+  z-index: 2;
+  position: relative;
+  max-width: 800px;
+}
+
+.catchy-copy {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: #555;
+  margin-bottom: 2rem;
+  font-family: "Public Sans", sans-serif;
+  z-index: 2;
+  position: relative;
+  font-weight: 500;
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.getting-started {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #fff;
+  border: 4px solid #111;
+  box-shadow: 8px 8px 0 #111;
+  border-radius: 1rem;
+}
+
+.getting-started h2 {
+  font-family: "Lexend Mega", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.component-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.getting-started ol {
+  padding-left: 1.5rem;
+}
+
+.getting-started li {
+  margin-bottom: 1.5rem;
+}
+
+.getting-started p {
+  margin-bottom: 1rem;
+}
+
+.getting-started strong {
+  color: #111;
+  font-weight: 700;
+}
+
+/* Code Blocks */
+.highlight {
+  background: rgb(43, 43, 43);
+  color: rgb(248, 248, 242);
+  position: relative;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.copy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  padding: 10px;
+  margin: 0;
+  background: rgb(43, 43, 43);
+  border: none;
+  cursor: pointer;
+  border-radius: 20%;
+}
+
+.copy .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.copy:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.copy:hover {
+  background: rgb(60, 60, 60);
+}
+
+.copy img {
+  width: 16px;
+  height: 16px;
+}
+
+.tag {
+  color: #f92672;
+}
+
+.name {
+  color: #a6e22e;
+}
+
+pre {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Footer */
+.site-footer {
+  background: #f8f9fa;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.footer-logo img {
+  width: 60px;
+  height: auto;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links li a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-made-by {
+  text-align: center;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.copyright {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.footer-buttons {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .title {
+    font-size: clamp(2.2rem, 7vw, 3.8rem);
+  }
+  
+  .description {
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+  }
+  
+  .catchy-copy {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+  }
+  
+  .getting-started {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Fixed Navigation for Mobile */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 3px solid #111;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0.5rem 0;
+  }
+  
+  nav {
+    padding: 0 0.5rem;
+  }
+  
+  /* Add top margin to body to account for fixed header */
+  body {
+    padding: 0 0.5rem;
+    padding-top: 80px;
+  }
+  
+  .logo img {
+    max-width: 220px;
+  }
+  
+  .footer-content {
+    padding: 0 1rem;
+  }
+  
+  .presentation {
+    padding: 1.5rem 1rem 2.5rem 1rem;
+    margin: 1rem auto 1.5rem auto;
+    min-height: 40vh;
+  }
+  
+  .title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    margin-bottom: 1rem;
+  }
+  
+  .catchy-copy {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .getting-started {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+  
+  .getting-started h2 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
+  
+  .component-description {
+    font-size: 1rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+  
+  .description {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .catchy-copy {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    margin-bottom: 1.2rem;
+  }
+  
+  .getting-started {
+    margin: 1.5rem 0;
+    padding: 1rem;
+  }
+  
+  .getting-started h2 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  
+  .highlight {
+    margin: 1rem 0;
+  }
+  
+  pre {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .getting-started ol {
+    padding-left: 1.2rem;
+  }
+  
+  .getting-started li {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 180px;
+  }
+  
+  .presentation {
+    padding: 1rem 0.75rem 2rem 0.75rem;
+    margin: 0.8rem auto 1rem auto;
+    min-height: 35vh;
+  }
+  
+  .title {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .description {
+    font-size: clamp(0.85rem, 4vw, 1.1rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .catchy-copy {
+    font-size: clamp(0.75rem, 3.5vw, 0.95rem);
+    margin-bottom: 1rem;
+  }
+  
+  .getting-started {
+    margin: 1rem 0;
+    padding: 0.75rem;
+  }
+  
+  .getting-started h2 {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .component-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .footer-buttons {
+    margin: 0.8rem 0;
+  }
+  
+  .highlight {
+    margin: 0.8rem 0;
+  }
+  
+  pre {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .getting-started ol {
+    padding-left: 1rem;
+  }
+  
+  .getting-started li {
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo img {
+    max-width: 150px;
+  }
+  
+  .presentation {
+    padding: 0.75rem 0.5rem 1.5rem 0.5rem;
+    margin: 0.5rem auto 0.8rem auto;
+    min-height: 30vh;
+  }
+  
+  .title {
+    font-size: clamp(1.4rem, 8vw, 2rem);
+  }
+  
+  .description {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
+  
+  .catchy-copy {
+    font-size: clamp(0.7rem, 3.5vw, 0.9rem);
+  }
+  
+  .getting-started {
+    padding: 0.5rem;
+  }
+  
+  .getting-started h2 {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+  }
+  
+  .component-description {
+    font-size: 0.9rem;
+  }
+  
+  .getting-started ol {
+    padding-left: 0.8rem;
+  }
+  
+  .getting-started li {
+    margin-bottom: 0.6rem;
+  }
+  
+  .footer-logo img {
+    width: 50px;
+  }
+  
+  .footer-links li a img {
+    width: 20px;
+    height: 20px;
+  }
+} 

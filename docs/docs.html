@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoBrutalismCSS</title>
+    <meta name="description"
+        content="NeoBrutalismCSS is a CSS framework that brings the aesthetics of NeoBrutalism to your web projects." />
+    <meta name="author" content="Matias Fandiño" />
+    <meta name="keywords"
+        content="css, css3, front-end, framework, html, html5, kickstarter, less, responsive, neo-brutalism, library, neumorphism, neobrutalism" />
+    <meta property="og:title" content="NeoBrutalismCSS" />
+    <meta property="og:description"
+        content="NeoBrutalismCSS is a CSS framework that brings the aesthetics of NeoBrutalism to your web projects." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NeoBrutalismCSS" />
+    <meta property="og:url" content="https://matifandy8.github.io/NeoBrutalismCSS/" />
+    <meta property="og:image" content="https://matifandy8.github.io/NeoBrutalismCSS/assets/logo.png" />
+    <meta property="og:image:alt" content="NeoBrutalismCSS Logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NeoBrutalismCSS" />
+    <meta name="twitter:description"
+        content="NeoBrutalismCSS is a CSS framework that brings the aesthetics of NeoBrutalism to your web projects." />
+    <meta name="twitter:image" content="https://matifandy8.github.io/NeoBrutalismCSS/assets/logo.png" />
+    <meta name="twitter:image:alt" content="NeoBrutalismCSS Logo" />
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="icon" sizes="32x32" href="assets/logo.png" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="assets/logo.png" type="image/x-icon">
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+   <!--  <link rel="stylesheet" href="https://unpkg.com/neobrutalismcss@latest"> -->
+    <!-- for dev -->
+    <link rel="stylesheet" href="../dist/index.css" /> 
+    <!--  -->
+    <link rel="stylesheet" href="docs.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@700&family=Public+Sans&display=swap"
+        rel="stylesheet" />
+        
+</head>
+
+<body>
+    <header>
+        <nav id="top">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-with-text.png" alt="logo" /></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="docs.html" class="active">Docs</a></li>
+                <li>
+                    <a href="https://github.com/matifandy8/NeoBrutalismCSS" target="_blank">
+                        <img src="assets/github.svg" alt="GitHub"></a>
+                </li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation menu">
+                <svg class="hamburger-icon" viewBox="0 0 100 80" width="24" height="24"><rect width="100" height="15" rx="8"></rect><rect y="30" width="100" height="15" rx="8"></rect><rect y="60" width="100" height="15" rx="8"></rect></svg>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-nav">
+                <h4 class="menu-title">Menu</h4>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                </ul>
+
+                <div class="components-group">
+                    <h4 class="menu-title">Components</h4>
+                    <ul class="components-links">
+                        <li><a href="#buttons">Buttons</a></li>
+                        <li><a href="#inputs">Inputs</a></li>
+                        <li><a href="#card">Card</a></li>
+                        <li><a href="#navigation">Navigation</a></li>
+                        <li><a href="#forms">Form Components</a></li>
+                        <li><a href="#badge">Badge</a></li>
+                        <li><a href="#checkbox">Checkbox</a></li>
+                        <li><a href="#table">Table</a></li>
+                        <li><a href="#feedback">Progress & Spinner</a></li>
+                        <li><a href="#dialog">Dialog</a></li>
+                        <li><a href="#avatar">Avatar</a></li>
+                        <li><a href="#marquee">Marquee</a></li>
+                        <li><a href="#utilities">Responsive Utilities</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content">
+            <section id="introduction" class="sections">
+                <h2>Docs</h2>
+                <p class="component-description">
+                    NeoBrutalismCSS is designed with simplicity in mind. Say goodbye to the complexities of learning
+                    numerous class names found in other frameworks. Instead, it follows a minimalist approach by applying
+                    fundamental styles based on HTML semantics.
+                </p>
+                <p class="component-description">
+                    Embrace a streamlined, no-frills approach to web design with NeoBrutalismCSS and start creating modern,
+                    neo-brutalist aesthetics with ease.
+                </p>
+                <p class="component-description">
+                    NeoBrutalismCSS doesn't provide any fonts, but we do maintain the following list of fonts that we
+                    recommend for usage alongside our framework for your convenience: Stint Ultra Expanded, Proza Libre,
+                    Lexend Mega and Public Sans
+                </p>
+            </section>
+
+            <section id="buttons" class="sections">
+                <h3>Buttons</h3>
+                <p class="component-description">
+                    Section showcases different button styles offered by NeoBrutalismCSS, including default,
+                    orange, blue, and green buttons.
+                </p>
+                <div class="component-preview">
+                    <button class="nb-button default">Default</button>
+                    <button class="nb-button orange">Orange</button>
+                    <button class="nb-button blue">Blue</button>
+                    <button class="nb-button green">Green</button>
+                </div>
+                
+                <hr>
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button" data-section="buttons"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html" >
+        <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button default"</span>&gt;Default<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button orange"</span>&gt;Orange<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button blue"</span>&gt;Blue<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button green"</span>&gt;Green<span class="tag">&lt;/button&gt;</span>
+        
+
+        <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button default rounded"</span>&gt;Default<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button orange rounded"</span>&gt;Orange<span class="tag">&lt;/button&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+            </section>
+            <section id="inputs" class="sections">
+                <h3>Inputs</h3>
+                <p class="component-description">
+                    Section demonstrates various input field styles, including default, orange, blue, and green
+                    inputs, provided by NeoBrutalismCSS.
+                </p>
+                <div class="component-preview">
+                    <input type="text" class="nb-input default" placeholder="Default" />
+                    <input type="text" class="nb-input orange" placeholder="Orange" />
+                    <input type="password" class="nb-input blue" placeholder="Blue" />
+                    <input type="email" class="nb-input green" placeholder="Green" />
+                </div>
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html">
+        <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"nb-input default"</span> placeholder=<span class="name">"Default"</span> <span class="tag">/&gt;</span>
+        <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"nb-input orange"</span> placeholder=<span class="name">"Orange"</span> <span class="tag">/&gt;</span>
+        <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"nb-input blue"</span> placeholder=<span class="name">"Blue"</span> <span class="tag">/&gt;</span>
+        <span class="tag">&lt;input</span> <span class="class">class=</span><span class="name">"nb-input green"</span> placeholder=<span class="name">"Green"</span> <span class="tag">/&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+            </section>
+            <section id="card" class="sections">
+                <h3>Card</h3>
+                <p class="component-description">
+                    Section presents a card with text content and image. It illustrates a user interface
+                    component provided by NeoBrutalismCSS for cards.
+                </p>
+                <div class="component-preview" style="gap: 2rem; display: flex; flex-wrap: wrap;">
+                    <div class="nb-card">
+                        <img src="assets/card-img.svg" loading="lazy" alt="Explore NeoBrutalismCSS"
+                                class="nb-card-img">
+                        <div class="nb-card-content">
+                            <h4 class="nb-card-title">Card Title</h4>
+                            <p class="nb-card-text">Unveil the future of NeoBrutalism with our groundbreaking approach that will transform your life.</p>
+                            <div class="nb-card-actions">
+                                <button class="nb-button default">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html">
+       <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-card"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;img</span> <span class="class">src=</span><span class="name">"..."</span> <span class="class">class=</span><span class="name">"nb-card-img"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-card-content"</span><span class="tag">&gt;</span>
+              <span class="tag">&lt;h4</span> <span class="class">class=</span><span class="name">"nb-card-title"</span><span class="tag">&gt;</span>Card Title<span class="tag">&lt;/h4&gt;</span>
+              <span class="tag">&lt;p</span> <span class="class">class=</span><span class="name">"nb-card-text"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/p&gt;</span>
+              <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-card-actions"</span><span class="tag">&gt;</span>
+                  <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button"</span><span class="tag">&gt;</span>Learn More<span class="tag">&lt;/button&gt;</span>
+              <span class="tag">&lt;/div&gt;</span>
+          <span class="tag">&lt;/div&gt;</span>
+       <span class="tag">&lt;/div&gt;</span>
+                        </code>
+                    </pre>
+                </figure>
+            </section>
+            <section id="navigation" class="sections">
+                <h3>Navigation</h3>
+                <p class="component-description">
+                    Section demonstrates navigation components provided by NeoBrutalismCSS.
+                </p>
+                
+                <h4>Navbar</h4>
+                <div class="component-preview">
+                    <nav class="nb-navbar" role="navigation" aria-label="Main navigation">
+                        <a href="/" class="nb-navbar-brand" aria-label="Go to homepage">Brand</a>
+                        <ul class="nb-navbar-nav" role="menubar">
+                            <li class="nb-navbar-item" role="none">
+                                <a href="/" class="nb-navbar-link active" role="menuitem" aria-current="page">Home</a>
+                            </li>
+                            <li class="nb-navbar-item" role="none">
+                                <a href="/about" class="nb-navbar-link" role="menuitem">About</a>
+                            </li>
+                            <li class="nb-navbar-item" role="none">
+                                <a href="/contact" class="nb-navbar-link" role="menuitem">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <h4>Breadcrumbs</h4>
+                <div class="component-preview">
+                    <nav class="nb-breadcrumb" role="navigation" aria-label="Breadcrumb">
+                        <div class="nb-breadcrumb-item">
+                            <a href="/" class="nb-breadcrumb-link" aria-label="Go to homepage">Home</a>
+                        </div>
+                        <div class="nb-breadcrumb-item">
+                            <a href="/products" class="nb-breadcrumb-link" aria-label="Go to products page">Products</a>
+                        </div>
+                        <div class="nb-breadcrumb-item">
+                            <span class="nb-breadcrumb-current" aria-current="page">Current Page</span>
+                        </div>
+                    </nav>
+                </div>
+
+             <figure class="highlight">
+  <pre>
+    <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+    <code class="language-html" data-lang="html">
+<span class="tag">&lt;nav</span> <span class="class">class=</span><span class="name">"nb-navbar"</span> <span class="class">role=</span><span class="name">"navigation"</span> <span class="class">aria-label=</span><span class="name">"Main navigation"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;a</span> <span class="class">href=</span><span class="name">"/"</span> <span class="class">class=</span><span class="name">"nb-navbar-brand"</span> <span class="class">aria-label=</span><span class="name">"Go to homepage"</span><span class="tag">&gt;</span>Brand<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;ul</span> <span class="class">class=</span><span class="name">"nb-navbar-nav"</span> <span class="class">role=</span><span class="name">"menubar"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;li</span> <span class="class">class=</span><span class="name">"nb-navbar-item"</span> <span class="class">role=</span><span class="name">"none"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;a</span> <span class="class">href=</span><span class="name">"/"</span> <span class="class">class=</span><span class="name">"nb-navbar-link active"</span> <span class="class">role=</span><span class="name">"menuitem"</span> <span class="class">aria-current=</span><span class="name">"page"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/a&gt;</span>
+        <span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;li</span> <span class="class">class=</span><span class="name">"nb-navbar-item"</span> <span class="class">role=</span><span class="name">"none"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;a</span> <span class="class">href=</span><span class="name">"/about"</span> <span class="class">class=</span><span class="name">"nb-navbar-link"</span> <span class="class">role=</span><span class="name">"menuitem"</span><span class="tag">&gt;</span>About<span class="tag">&lt;/a&gt;</span>
+        <span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;li</span> <span class="class">class=</span><span class="name">"nb-navbar-item"</span> <span class="class">role=</span><span class="name">"none"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;a</span> <span class="class">href=</span><span class="name">"/contact"</span> <span class="class">class=</span><span class="name">"nb-navbar-link"</span> <span class="class">role=</span><span class="name">"menuitem"</span><span class="tag">&gt;</span>Contact<span class="tag">&lt;/a&gt;</span>
+        <span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+
+<span class="tag">&lt;nav</span> <span class="class">class=</span><span class="name">"nb-breadcrumb"</span> <span class="class">role=</span><span class="name">"navigation"</span> <span class="class">aria-label=</span><span class="name">"Breadcrumb"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-breadcrumb-item"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;a</span> <span class="class">href=</span><span class="name">"/"</span> <span class="class">class=</span><span class="name">"nb-breadcrumb-link"</span> <span class="class">aria-label=</span><span class="name">"Go to homepage"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-breadcrumb-item"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;a</span> <span class="class">href=</span><span class="name">"/products"</span> <span class="class">class=</span><span class="name">"nb-breadcrumb-link"</span> <span class="class">aria-label=</span><span class="name">"Go to products page"</span><span class="tag">&gt;</span>Products<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-breadcrumb-item"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;span</span> <span class="class">class=</span><span class="name">"nb-breadcrumb-current"</span> <span class="class">aria-current=</span><span class="name">"page"</span><span class="tag">&gt;</span>Current Page<span class="tag">&lt;/span&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+    </code>
+  </pre>
+</figure>
+            </section>
+
+            <section id="forms" class="sections">
+                <h3>Form Components</h3>
+                <p class="component-description">
+                    Section demonstrates additional form components provided by NeoBrutalismCSS.
+                </p>
+                
+                <h4>Textarea</h4>
+                <div class="component-preview">
+                    <textarea class="nb-textarea" placeholder="Enter your message here..."></textarea>
+                </div>
+
+                <h4>Radio Buttons</h4>
+                <div class="component-preview">
+                    <input type="radio" id="radio1" class="nb-radio" name="radio-group">
+                    <label for="radio1">Option 1</label>
+                </div>
+
+
+                <h4>Form Group</h4>
+                <div class="component-preview">
+                    <div class="nb-form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="nb-textarea" placeholder="Enter your message"></textarea>
+                    </div>
+                </div>
+
+                <figure class="highlight">
+  <pre>
+    <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+    <code class="language-html" data-lang="html">
+<span class="tag">&lt;textarea</span> <span class="class">class=</span><span class="name">"nb-textarea"</span> <span class="class">placeholder=</span><span class="name">"Enter your message..."</span><span class="tag">&gt;&lt;/textarea&gt;</span>
+
+<span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"radio"</span> <span class="class">id=</span><span class="name">"radio1"</span> <span class="class">class=</span><span class="name">"nb-radio"</span> <span class="class">name=</span><span class="name">"radio-group"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;label</span> <span class="class">for=</span><span class="name">"radio1"</span><span class="tag">&gt;</span>Option 1<span class="tag">&lt;/label&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-form-group"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;label</span> <span class="class">for=</span><span class="name">"name"</span><span class="tag">&gt;</span>Name<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"text"</span> <span class="class">id=</span><span class="name">"name"</span> <span class="class">class=</span><span class="name">"nb-input"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+    </code>
+  </pre>
+</figure>
+            </section>
+            <section id="badge" class="sections">
+                <h3>Badge</h3>
+                <p class="component-description">
+                    Section presents a badge with text. It illustrates a user interface component
+                    provided by NeoBrutalismCSS for badges.
+                </p>
+                <div class="component-preview">
+                    <div class="badge default">
+                        <div class="badge-inner">
+                            <span class="badge-text">Default</span>
+                        </div>
+                    </div>
+                    <div class="badge orange">
+                        <div class="badge-inner">
+                            <span class="badge-text">Orange</span>
+                        </div>
+                    </div>
+                    <div class="badge blue">
+                        <div class="badge-inner">
+                            <span class="badge-text">Blue</span>
+                        </div>
+                    </div>
+                     <div class="badge green">
+                        <div class="badge-inner">
+                            <span class="badge-text">Green</span>
+                        </div>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html"> 
+    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"badge orange"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"badge-inner"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;p</span> <span class="class">class=</span><span class="name">"badge-text"</span><span class="tag">&gt;</span>Excellence<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+
+
+            </section>
+            <section id="checkbox" class="sections">
+                <h3>Checkbox</h3>
+                <p class="component-description">
+                    Section showcases checkbox style provided by NeoBrutalismCSS.
+                </p>
+                <div class="component-preview">
+                    <label class="nb-label">Default
+                        <input type="checkbox" class="nb-checkbox default" name="vehicle1" value="Bike" checked>
+                    </label>
+                    <label class="nb-label">Orange
+                        <input type="checkbox" class="nb-checkbox orange" name="vehicle2" value="Car" checked>
+                    </label>
+                    <label class="nb-label">Blue
+                        <input type="checkbox" class="nb-checkbox blue" name="vehicle3" value="Boat" checked>
+                    </label>
+                    <label class="nb-label">Green
+                        <input type="checkbox" class="nb-checkbox green" name="vehicle3" value="Boat" checked>
+                    </label>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                        <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                        <code class="language-html" data-lang="html">
+      <span class="tag">&lt;label</span> <span class="class">class=</span><span class="name">"nb-label"</span>&gt;Default
+        <span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"checkbox"</span> <span class="class">class=</span><span class="name">"nb-checkbox default"</span> <span class="class">checked</span>&gt;
+      <span class="tag">&lt;/label&gt;</span>
+      <span class="tag">&lt;label</span> <span class="class">class=</span><span class="name">"nb-label"</span>&gt;Orange
+         <span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"checkbox"</span> <span class="class">class=</span><span class="name">"nb-checkbox orange"</span> <span class="class">checked</span>&gt;
+      <span class="tag">&lt;/label&gt;</span>
+          <span class="tag">&lt;label</span> <span class="class">class=</span><span class="name">"nb-label"</span>&gt;Blue
+          <span class="tag">&lt;input</span> <span class="class">type=</span><span class="name">"checkbox"</span> <span class="class">class=</span><span class="name">"nb-checkbox blue"</span> <span class="class">checked</span>&gt;
+      <span class="tag">&lt;/label&gt;</span>
+                        </code>
+                    </pre>
+                </figure>
+
+            </section>
+            <section id="table" class="sections">
+                <h3>Table</h3>
+                <p class="component-description">
+                    Section demonstrates table components provided by NeoBrutalismCSS.
+                </p>
+                
+                <h4>Basic Table</h4>
+                <div class="component-preview">
+                    <table class="nb-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>Inactive</td>
+                            </tr>
+                            <tr>
+                                <td>Bob Johnson</td>
+                                <td>bob@example.com</td>
+                                <td>Active</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Table with Container</h4>
+                <div class="component-preview">
+                    <div class="nb-table-container">
+                        <div class="nb-table-header">User Management</div>
+                        <table class="nb-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Admin User</td>
+                                    <td>Administrator</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Regular User</td>
+                                    <td>User</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="nb-table-footer">Total: 2 users</div>
+                    </div>
+                </div>
+
+             <figure class="highlight">
+<pre>
+    <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+    <code class="language-html" data-lang="html">
+<span class="tag">&lt;table</span> <span class="class">class=</span><span class="name">"nb-table"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;thead&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;th&gt;</span>Name<span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th&gt;</span>Email<span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/thead&gt;</span>
+    <span class="tag">&lt;tbody&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td&gt;</span>John Doe<span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span>john@example.com<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-table-container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-table-header"</span><span class="tag">&gt;</span>Title<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;table</span> <span class="class">class=</span><span class="name">"nb-table"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/table&gt;</span>
+    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-table-footer"</span><span class="tag">&gt;</span>Footer<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+    </code>
+  </pre>
+</figure>
+            </section>
+
+            <section id="feedback" class="sections">
+                <h3>Progress & Spinner</h3>
+                <p class="component-description">
+                    Section demonstrates feedback components provided by NeoBrutalismCSS.
+                </p>
+                
+                <h4>Progress Bar</h4>
+                <div class="component-preview">
+                    <div class="nb-progress">
+                        <div class="nb-progress-bar" style="width: 75%"></div>
+                        <div class="nb-progress-text">75%</div>
+                    </div>
+                    
+                    <div class="nb-progress small">
+                        <div class="nb-progress-bar" style="width: 50%"></div>
+                        <div class="nb-progress-text">50%</div>
+                    </div>
+                    
+                    <div class="nb-progress large striped">
+                        <div class="nb-progress-bar" style="width: 90%"></div>
+                        <div class="nb-progress-text">90%</div>
+                    </div>
+                </div>
+
+                <h4>Spinner</h4>
+                <div class="component-preview">
+                    <div class="nb-spinner"></div>
+                    <div class="nb-spinner small"></div>
+                    <div class="nb-spinner large"></div>
+                    <div class="nb-spinner dots"><span></span></div>
+                </div>
+
+           
+
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html">
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-progress"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-progress-bar"</span> <span class="class">style=</span><span class="name">"width: 75%"</span><span class="tag">&gt;&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-progress-text"</span><span class="tag">&gt;</span>75%<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-spinner"</span><span class="tag">&gt;&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-spinner dots"</span><span class="tag">&gt;</span><span class="tag">&lt;span&gt;&lt;/span&gt;</span><span class="tag">&lt;/div&gt;</span>
+
+                      </code>
+                    </pre>
+                </figure>
+            </section>
+            <section id="dialog" class="sections">
+                <h3>Dialog</h3>
+                <p class="component-description">
+                    Section presents a dialog box with text content and buttons. It illustrates a user
+                    interface component provided by NeoBrutalismCSS for dialogs and pop-ups.
+                </p>
+                <div class="nb-dialog">
+                    <div class="nb-dialog-header">
+                        Dialog Header
+                    </div>
+                    <div class="nb-dialog-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+                        officiis officia, nulla commodi repellat modi ab et ea! Excepturi molestiae voluptatibus
+                        voluptatum
+                    </div>
+                    <div class="nb-dialog-footer">
+                        <button class="nb-button default">Cancel</button>
+                        <button class="nb-button green">Save</button>
+                    </div>
+                </div>
+
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html">
+       <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-dialog"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-dialog-header"</span><span class="tag">&gt;</span>Dialog Header<span class="tag">&lt;/div&gt;</span>
+            <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-dialog-body"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+            <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-dialog-footer"</span><span class="tag">&gt;</span>
+                <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button"</span><span class="tag">&gt;</span>Cancel<span class="tag">&lt;/button&gt;</span>
+                <span class="tag">&lt;button</span> <span class="class">class=</span><span class="name">"nb-button green"</span><span class="tag">&gt;</span>Save<span class="tag">&lt;/button&gt;</span>
+            <span class="tag">&lt;/div&gt;</span>
+       <span class="tag">&lt;/div&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+            </section>
+            <section id="avatar" class="sections">
+                <h3>Avatar</h3>
+                <p class="component-description">
+                    Section demonstrates an avatar component provided by NeoBrutalismCSS.
+                </p>
+                <div class="component-preview">
+                    <div class="avatar avatar-sm">SM</div>
+                    <div class="avatar avatar-md blue">MD</div>
+                    <div class="avatar avatar-lg pale-red">
+                        <img src="assets/avatar-1.png" alt="Avatar" />
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html">
+       <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"avatar avatar-sm"</span><span class="tag">&gt;</span>SM<span class="tag">&lt;/div&gt;</span>
+       <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"avatar avatar-md blue"</span><span class="tag">&gt;</span>MD<span class="tag">&lt;/div&gt;</span>
+       <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"avatar avatar-lg pale-red"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;img</span> <span class="class">src=</span><span class="name">"..."</span> <span class="class">alt=</span><span class="name">"Avatar"</span> <span class="tag">/&gt;</span>
+       <span class="tag">&lt;/div&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+            </section>
+            <section id="marquee" class="sections">
+                <h3>Marquee</h3>
+                <p class="component-description">
+                    Section demonstrates a marquee component provided by NeoBrutalismCSS.
+                </p>
+                <div class="nb-marquee green">
+                    <div class="nb-marquee-content">
+                        <span>Item 1</span>
+                        <span>Item 2</span>
+                        <span>Item 3</span>
+                        <span>Item 4</span>
+                        <span>Item 5</span>
+                    </div>
+                </div>
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html">
+       <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-marquee green"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-marquee-content"</span><span class="tag">&gt;</span>
+             <span class="tag">&lt;span&gt;</span>Item 1<span class="tag">&lt;/span&gt;</span>
+             <span class="tag">&lt;span&gt;</span>Item 2<span class="tag">&lt;/span&gt;</span>
+          <span class="tag">&lt;/div&gt;</span>
+       <span class="tag">&lt;/div&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+            </section>
+
+            <section id="utilities" class="sections">
+                <h3>Responsive Utilities</h3>
+                <p class="component-description">
+                    NeoBrutalismCSS provides a comprehensive set of responsive utility classes that you can apply directly to your HTML elements. These utilities help you create responsive layouts without writing custom CSS.
+                </p>
+                
+                <h4>Display Utilities</h4>
+                <p class="component-description">
+                    Control element visibility and display properties across different breakpoints.
+                </p>
+                <div class="component-preview">
+                    <div class="nb-flex-row">
+                        <div class="nb-block" style="background: #f0f0f0; padding: 1rem; border: 2px solid #000;">Block</div>
+                        <div class="nb-hidden" style="background: #f0f0f0; padding: 1rem; border: 2px solid #000;">Hidden</div>
+                        <div class="nb-flex" style="background: #f0f0f0; padding: 1rem; border: 2px solid #000;">Flex</div>
+                    </div>
+                </div>
+
+                <h4>Grid Utilities</h4>
+                <p class="component-description">
+                    Create responsive grid layouts with automatic breakpoint adjustments.
+                </p>
+                <div class="component-preview">
+                    <div class="nb-grid-3">
+                        <div style="background: #f0f0f0; padding: 1rem; border: 2px solid #000;">Grid Item 1</div>
+                        <div style="background: #f0f0f0; padding: 1rem; border: 2px solid #000;">Grid Item 2</div>
+                        <div style="background: #f0f0f0; padding: 1rem; border: 2px solid #000;">Grid Item 3</div>
+                    </div>
+                </div>
+
+                <h4>Flex Utilities</h4>
+                <p class="component-description">
+                    Control flex direction and layout across breakpoints.
+                </p>
+                <div class="component-preview">
+                    <div class="nb-flex-row nb-flex-col-sm">
+                        <button class="nb-button blue">Button 1</button>
+                        <button class="nb-button orange">Button 2</button>
+                        <button class="nb-button green">Button 3</button>
+                    </div>
+                </div>
+
+                <h4>Spacing Utilities</h4>
+                <p class="component-description">
+                    Apply responsive padding and margins to elements.
+                </p>
+                <div class="component-preview">
+                    <div class="nb-p-2 nb-p-md-4" style="background: #f0f0f0; border: 2px solid #000;">
+                        <p>This element has responsive padding: 1rem on mobile, 2rem on desktop</p>
+                    </div>
+                </div>
+
+                <h4>Text Utilities</h4>
+                <p class="component-description">
+                    Control text alignment and responsive font sizes.
+                </p>
+                <div class="component-preview">
+                    <h1 class="nb-text-2xl nb-text-md-3xl nb-text-center">Responsive Heading</h1>
+                    <p class="nb-text-base nb-text-md-lg nb-text-center">This text is responsive and centered</p>
+                </div>
+
+                <h4>Width Utilities</h4>
+                <p class="component-description">
+                    Control element widths and maximum widths responsively.
+                </p>
+                <div class="component-preview">
+                    <div class="nb-max-w-md" style="background: #f0f0f0; padding: 1rem; border: 2px solid #000; margin: 0 auto;">
+                        <p>This container has a maximum width that adapts to screen size</p>
+                    </div>
+                </div>
+
+                <figure class="highlight">
+                    <pre>
+                      <button class="copy tooltip copy-button"><img src="assets/copy.svg" alt="copy"> <span class="tooltiptext">Copy to clipboard</span></button>
+                      <code class="language-html" data-lang="html">
+<span class="comment">&lt;!-- Display Utilities --&gt;</span>
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-block"</span><span class="tag">&gt;</span>Block<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-hidden"</span><span class="tag">&gt;</span>Hidden<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-flex"</span><span class="tag">&gt;</span>Flex<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Grid Utilities --&gt;</span>
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-grid-3"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div&gt;</span>Item 1<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div&gt;</span>Item 2<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div&gt;</span>Item 3<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Flex Utilities --&gt;</span>
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-flex-row nb-flex-col-sm"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;button&gt;</span>Button 1<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;button&gt;</span>Button 2<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Spacing Utilities --&gt;</span>
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-p-2 nb-p-md-4"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Responsive padding<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Text Utilities --&gt;</span>
+<span class="tag">&lt;h1</span> <span class="class">class=</span><span class="name">"nb-text-2xl nb-text-md-3xl nb-text-center"</span><span class="tag">&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
+
+<span class="comment">&lt;!-- Width Utilities --&gt;</span>
+<span class="tag">&lt;div</span> <span class="class">class=</span><span class="name">"nb-max-w-md"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Responsive width<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+
+                <h4>Breakpoint Reference</h4>
+                <div class="component-preview">
+                    <div class="nb-table-container">
+                        <div class="nb-table-header">Breakpoint Classes</div>
+                        <table class="nb-table">
+                            <thead>
+                                <tr>
+                                    <th>Breakpoint</th>
+                                    <th>Screen Size</th>
+                                    <th>Class Suffix</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Small</td>
+                                    <td>576px+</td>
+                                    <td><code>-sm</code></td>
+                                    <td><code>nb-hidden-sm</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Medium</td>
+                                    <td>768px+</td>
+                                    <td><code>-md</code></td>
+                                    <td><code>nb-text-md-lg</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Large</td>
+                                    <td>992px+</td>
+                                    <td><code>-lg</code></td>
+                                    <td><code>nb-flex-lg</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Extra Large</td>
+                                    <td>1200px+</td>
+                                    <td><code>-xl</code></td>
+                                    <td><code>nb-block-xl</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="nb-table-footer">Use these suffixes to create responsive behavior</div>
+                    </div>
+                </div>
+
+                <h4>Available Utility Classes</h4>
+                <div class="component-preview">
+                    <div class="nb-grid-2">
+                        <div>
+                            <h5>Display</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><code>nb-hidden</code> - Hide element</li>
+                                <li><code>nb-block</code> - Display block</li>
+                                <li><code>nb-flex</code> - Display flex</li>
+                                <li><code>nb-grid</code> - Display grid</li>
+                                <li><code>nb-inline</code> - Display inline</li>
+                                <li><code>nb-inline-block</code> - Display inline-block</li>
+                                <li><code>nb-inline-flex</code> - Display inline-flex</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Grid</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><code>nb-grid-1</code> - 1 column</li>
+                                <li><code>nb-grid-2</code> - 2 columns (responsive)</li>
+                                <li><code>nb-grid-3</code> - 3 columns (responsive)</li>
+                                <li><code>nb-grid-4</code> - 4 columns (responsive)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Flex</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><code>nb-flex-col</code> - Flex column</li>
+                                <li><code>nb-flex-row</code> - Flex row with wrap</li>
+                                <li><code>nb-flex-col-sm</code> - Column on small+</li>
+                                <li><code>nb-flex-row-md</code> - Row on medium+</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Spacing</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><code>nb-p-1</code> to <code>nb-p-4</code> - Padding</li>
+                                <li><code>nb-m-1</code> to <code>nb-m-4</code> - Margin</li>
+                                <li><code>nb-p-sm-1</code> to <code>nb-p-sm-4</code> - Responsive padding</li>
+                                <li><code>nb-m-md-1</code> to <code>nb-m-md-4</code> - Responsive margin</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Text</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><code>nb-text-center</code> - Center align</li>
+                                <li><code>nb-text-left</code> - Left align</li>
+                                <li><code>nb-text-right</code> - Right align</li>
+                                <li><code>nb-text-sm</code> to <code>nb-text-3xl</code> - Font sizes</li>
+                                <li><code>nb-text-sm-lg</code> to <code>nb-text-md-3xl</code> - Responsive sizes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Width</h5>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><code>nb-w-full</code> - Full width</li>
+                                <li><code>nb-w-auto</code> - Auto width</li>
+                                <li><code>nb-max-w-sm</code> to <code>nb-max-w-xl</code> - Max widths</li>
+                                <li><code>nb-max-w-sm-lg</code> to <code>nb-max-w-md-xl</code> - Responsive max widths</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="overlay"></div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="NeoBrutalismCSS Logo" />
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="https://github.com/matifandy8/NeoBrutalismCSS" target="_blank">
+                            <img src="assets/github.svg" alt="GitHub"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-buttons">
+            <a href="https://github.com/matifandy8/NeoBrutalismCSS/issues" target="_blank" class="nb-button blue"><i
+                    class="fas fa-bug"></i> Report an issue</a>
+        </div>
+        <div class="footer-made-by">
+            <p>Made by Matias Fandiño</p>
+        </div>
+        <div class="copyright">
+            &copy; 2023 NeoBrutalismCSS. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
