@@ -128,6 +128,11 @@ nav {
   right: -50px;
 }
 
+.producthunt{
+  display: flex;
+  justify-content: center;
+}
+
 .title {
   position: relative;
   z-index: 2;
@@ -547,6 +552,7 @@ code {
     font-size: 0.95rem;
     line-height: 1.5;
   }
+  
   
   .footer-buttons {
     margin: 0.8rem 0;
