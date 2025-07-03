@@ -1,6 +1,6 @@
 {
   "name": "neobrutalismcss",
-  "version": "0.5.5",
+  "version": "1.0.0",
   "description": "NeoBrutalismCSS design framework that embraces the aesthetics of neo-brutalism in web",
   "main": "dist/index.min.css",
   "style": "dist/index.min.css",
@@ -37,7 +37,6 @@
     "html5",
     "kickstarter",
     "less",
-    "responsive",
     "mobile",
     "mobile-first",
     "postcss",
@@ -45,7 +44,9 @@
     "sass",
     "scss",
     "neo-brutalism",
-    "brutalism"
+    "brutalism",
+    "neobrutalism",
+    "neobrutalismcss"
   ],
   "author": "Matias Fandiño",
   "license": "MIT",
