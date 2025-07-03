@@ -29,10 +29,15 @@
     <link rel="icon" sizes="32x32" href="assets/logo.png" type="image/x-icon">
     <link rel="icon" sizes="16x16" href="assets/logo.png" type="image/x-icon">
     <link rel="icon" href="assets/logo.png" type="image/x-icon">
-   <!--  <link rel="stylesheet" href="https://unpkg.com/neobrutalismcss@latest"> -->
-    <!-- for dev -->
-    <link rel="stylesheet" href="../dist/index.css" /> 
-    <!--  -->
+    <script>
+        const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = isLocal
+          ? '/dist/index.css'
+          : 'https://cdn.jsdelivr.net/gh/matifandy8/NeoBrutalismCSS/dist/index.min.css';
+        document.head.appendChild(link);
+      </script>
     <link rel="stylesheet" href="docs.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
