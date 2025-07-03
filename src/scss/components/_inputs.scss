@@ -1,98 +1,140 @@
-// Define a mixin for input styles
-@mixin input-styles($bg-color, $text-color, $border-color, $hover-bg-color) {
-  padding: 10px;
+@mixin input-styles(
+  $bg-color,
+  $text-color,
+  $border-color,
+  $hover-bg-color,
+  $shadow-color: #000
+) {
+  padding: 0.5em 0.75em;
   background-color: $bg-color;
   color: $text-color;
   border: 2px solid $border-color;
-  border-radius: 0.25rem;
-  box-shadow: 2px 2px 0px 0px #000;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  text-align: center;
+  box-shadow: 3px 3px 0px 0px $shadow-color;
+  font-family: "Lexend Mega", "Public Sans", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-align: left;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.15s cubic-bezier(0.77, 0, 0.18, 1);
+  outline: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  @include respond-to(sm) {
+    padding: 0.6em 1em;
+    border-width: 2.5px;
+    box-shadow: 4px 4px 0px 0px $shadow-color;
+    font-size: 0.9rem;
+    max-width: 350px;
+  }
+
+  @include respond-to(md) {
+    padding: 0.7em 1.25em;
+    border-width: 3px;
+    box-shadow: 5px 5px 0px 0px $shadow-color;
+    font-size: 1rem;
+    max-width: 400px;
+  }
+
+  @include respond-to(lg) {
+    padding: 0.7em 1.5em;
+    border-width: 3.5px;
+    box-shadow: 5px 5px 0px 0px $shadow-color;
+    max-width: 450px;
+  }
 
   &:hover {
     background-color: $hover-bg-color;
   }
 
   &:focus {
-    outline-color: transparent;
-    border-color: $hover-bg-color;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px $shadow-color;
   }
 
   &.disabled {
     background-color: #ccc;
+    color: #888;
     cursor: not-allowed;
+    box-shadow: none;
   }
   &::placeholder {
     color: $text-color;
-    opacity: 1;
-    text-align: left;
+    opacity: 0.7;
   }
 }
 
 $input-variants: (
   default: (
     #ffffff,
-    #000000,
-    #cccccc,
+    $black,
+    $black,
     #aaaaaa,
+    $black,
   ),
   orange: (
     $orange,
     black,
     black,
     $hover-orange,
+    $black,
   ),
   blue: (
     $blue,
     white,
     black,
     $hover-blue,
+    $black,
   ),
   green: (
     $green,
     white,
     black,
     $hover-green,
+    $black,
   ),
   sky-blue: (
     $sky-blue,
     white,
     black,
     $hover-sky-blue,
+    $black,
   ),
   pale-red: (
     $pale-red,
     white,
     black,
     $hover-pale-red,
+    $black,
   ),
   pale-violet: (
     $pale-violet,
     white,
     black,
     $hover-pale-violet,
+    $black,
   ),
   soft-blue: (
     $soft-blue,
     white,
     black,
     $hover-soft-blue,
+    $black,
   ),
   pale-cyan: (
     $pale-cyan,
     white,
     black,
     $hover-pale-cyan,
+    $black,
   ),
   pale-yellow: (
     $pale-yellow,
     black,
     black,
     $hover-pale-yellow,
+    $black,
   ),
 );
 

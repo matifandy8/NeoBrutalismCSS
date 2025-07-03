@@ -1,13 +1,65 @@
-.dialog {
-  background: #fff;
-  border-radius: 20px;
-  filter: drop-shadow(4px 4px 0px #000);
-  padding: 20px;
-  border: 3px solid #000;
-  width: 20rem;
+@mixin dialog-styles($header-bg, $header-text, $border-color, $shadow-color: #000) {
+  border: 3.5px solid $border-color;
+  box-shadow: 8px 8px 0px $shadow-color;
 
-  p {
-    font-size: 18px;
+  .nb-dialog-header {
+    background-color: $header-bg;
+    color: $header-text;
+    border-bottom: 3.5px solid $border-color;
+  }
+}
+
+.nb-dialog {
+  @include dialog-styles($black, $white, $black, $black);
+  background: $white;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+
+  .nb-dialog-header {
+    padding: 1rem 1.5rem;
+    font-family: "Lexend Mega", "Public Sans", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .nb-dialog-body {
+    padding: 1.5rem;
+    font-family: "Public Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .nb-dialog-footer {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+}
+
+$dialog-variants: (
+  default: ($black, $white, $black, $black),
+  orange: ($orange, $black, $black, $black),
+  blue: ($blue, $white, $black, $black),
+  green: ($green, $white, 'black', $black),
+  "sky-blue": ($sky-blue, $white, $black, $black),
+  "pale-red": ($pale-red, $white, $black, $black),
+  "pale-violet": ($pale-violet, $white, $black, $black),
+  "soft-blue": ($soft-blue, $white, $black, $black),
+  "pale-cyan": ($pale-cyan, $white, $black, $black),
+  "pale-yellow": ($pale-yellow, $black, $black, $black)
+);
+
+@each $variant, $colors in $dialog-variants {
+  .nb-dialog.#{$variant} {
+    @include dialog-styles(
+      nth($colors, 1),
+      nth($colors, 2),
+      nth($colors, 3),
+      nth($colors, 4)
+    );
   }
 }
 

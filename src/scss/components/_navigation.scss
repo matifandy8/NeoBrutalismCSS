@@ -1,0 +1,360 @@
+.nb-navbar {
+  background: $white;
+  border: 2.5px solid $black;
+  box-shadow: 6px 6px 0px $black;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Public Sans", sans-serif;
+  position: relative;
+  
+  @include respond-to(sm) {
+    border-width: 3px;
+    box-shadow: 7px 7px 0px $black;
+    padding: 0.875rem 1.25rem;
+  }
+
+  @include respond-to(md) {
+    border-width: 3.5px;
+    box-shadow: 8px 8px 0px $black;
+    padding: 1rem 1.5rem;
+  }
+  
+  &-brand {
+    font-family: "Lexend Mega", "Public Sans", sans-serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: $black;
+    text-decoration: none;
+    
+    @include respond-to(sm) {
+      font-size: 1.375rem;
+    }
+
+    @include respond-to(md) {
+      font-size: 1.5rem;
+    }
+    
+    &:hover {
+      transform: translate(2px, 2px);
+      transition: transform 0.15s cubic-bezier(0.77, 0, 0.18, 1);
+    }
+  }
+  
+  &-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+
+    @include respond-to(sm) {
+      gap: 0.75rem;
+    }
+
+    @include respond-to(md) {
+      gap: 1rem;
+    }
+  }
+  
+  &-item {
+    margin: 0;
+  }
+  
+  &-link {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    color: $black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 2px solid transparent;
+    transition: all 0.15s cubic-bezier(0.77, 0, 0.18, 1);
+    
+    @include respond-to(sm) {
+      padding: 0.625rem 1rem;
+      font-size: 0.9rem;
+      border-width: 2.5px;
+    }
+
+    @include respond-to(md) {
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      border-width: 3px;
+    }
+    
+    &:hover {
+      background: $black;
+      color: $white;
+      border-color: $black;
+      transform: translate(-2px, -2px);
+      box-shadow: 2px 2px 0px $black;
+
+      @include respond-to(sm) {
+        transform: translate(-2.5px, -2.5px);
+        box-shadow: 2.5px 2.5px 0px $black;
+      }
+
+      @include respond-to(md) {
+        transform: translate(-3px, -3px);
+        box-shadow: 3px 3px 0px $black;
+      }
+    }
+    
+    &.active {
+      background: $black;
+      color: $white;
+      border-color: $black;
+      box-shadow: 2px 2px 0px $black;
+
+      @include respond-to(sm) {
+        box-shadow: 2.5px 2.5px 0px $black;
+      }
+
+      @include respond-to(md) {
+        box-shadow: 3px 3px 0px $black;
+      }
+    }
+  }
+  
+  &-toggle {
+    display: none;
+    background: none;
+    border: 2px solid $black;
+    padding: 0.375rem;
+    cursor: pointer;
+    
+    @include respond-to(sm) {
+      border-width: 2.5px;
+      padding: 0.5rem;
+    }
+
+    @include respond-to(md) {
+      border-width: 3px;
+      padding: 0.5rem;
+    }
+    
+    .hamburger {
+      width: 18px;
+      height: 2px;
+      background: $black;
+      position: relative;
+      
+      @include respond-to(sm) {
+        width: 20px;
+      }
+      
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background: $black;
+        transition: transform 0.3s ease;
+
+        @include respond-to(sm) {
+          width: 20px;
+        }
+      }
+      
+      &::before {
+        top: -5px;
+
+        @include respond-to(sm) {
+          top: -6px;
+        }
+      }
+      
+      &::after {
+        bottom: -5px;
+
+        @include respond-to(sm) {
+          bottom: -6px;
+        }
+      }
+    }
+    
+    &.active .hamburger {
+      background: transparent;
+      
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+      
+      &::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.nb-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.8rem;
+  margin: 0.75rem 0;
+  
+  @include respond-to(sm) {
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    margin: 0.875rem 0;
+  }
+
+  @include respond-to(md) {
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+  
+  &-item {
+    display: flex;
+    align-items: center;
+    
+    &:not(:last-child)::after {
+      content: '/';
+      margin-left: 0.375rem;
+      color: #666;
+
+      @include respond-to(sm) {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  
+  &-link {
+    color: $black;
+    text-decoration: none;
+    padding: 0.2rem 0.375rem;
+    border: 1.5px solid transparent;
+    transition: all 0.15s cubic-bezier(0.77, 0, 0.18, 1);
+    
+    @include respond-to(sm) {
+      padding: 0.25rem 0.5rem;
+      border-width: 2px;
+    }
+    
+    &:hover {
+      background: $black;
+      color: $white;
+      border-color: $black;
+      transform: translate(-1.5px, -1.5px);
+      box-shadow: 1.5px 1.5px 0px $black;
+
+      @include respond-to(sm) {
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px 0px $black;
+      }
+    }
+  }
+  
+  &-current {
+    color: #666;
+    font-weight: 600;
+  }
+}
+
+@include respond-to-max(md) {
+  .nb-navbar {
+    &-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: $white;
+      border: 2.5px solid $black;
+      border-top: none;
+      box-shadow: 6px 6px 0px $black;
+      flex-direction: column;
+      padding: 0.75rem;
+      z-index: 1000;
+      
+      @include respond-to(sm) {
+        border-width: 3px;
+        box-shadow: 7px 7px 0px $black;
+        padding: 1rem;
+      }
+      
+      &.active {
+        display: flex;
+      }
+    }
+    
+    &-toggle {
+      display: block;
+    }
+  }
+}
+
+@each $variant, $colors in $dialog-variants {
+  .nb-navbar.#{$variant} {
+    background: nth($colors, 1);
+    border-color: nth($colors, 2);
+    box-shadow: 8px 8px 0px nth($colors, 2);
+    
+    $bg-color: nth($colors, 1);
+    $text-color: if(lightness($bg-color) > 50%, $black, $white);
+    
+    .nb-navbar-brand {
+      color: $text-color;
+    }
+    
+    .nb-navbar-link {
+      color: $text-color;
+      border-color: transparent;
+      
+      &:hover {
+        background: nth($colors, 2);
+        color: if(lightness(nth($colors, 2)) > 50%, $black, $white);
+        border-color: nth($colors, 2);
+        box-shadow: 3px 3px 0px nth($colors, 2);
+      }
+      
+      &.active {
+        background: nth($colors, 2);
+        color: if(lightness(nth($colors, 2)) > 50%, $black, $white);
+        border-color: nth($colors, 2);
+        box-shadow: 3px 3px 0px nth($colors, 2);
+      }
+    }
+    
+    .nb-navbar-toggle {
+      border-color: $text-color;
+      
+      .hamburger,
+      .hamburger::before,
+      .hamburger::after {
+        background: $text-color;
+      }
+    }
+    
+    @include respond-to-max(md) {
+      .nb-navbar-nav {
+        background: nth($colors, 1);
+        border-color: nth($colors, 2);
+        box-shadow: 6px 6px 0px nth($colors, 2);
+        
+        .nb-navbar-link {
+          color: $text-color;
+          
+          &:hover {
+            background: nth($colors, 2);
+            color: if(lightness(nth($colors, 2)) > 50%, $black, $white);
+          }
+          
+          &.active {
+            background: nth($colors, 2);
+            color: if(lightness(nth($colors, 2)) > 50%, $black, $white);
+          }
+        }
+      }
+    }
+  }
+} 

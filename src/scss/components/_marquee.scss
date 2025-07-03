@@ -1,25 +1,49 @@
-.marquee {
+@mixin marquee-styles($bg-color, $text-color, $border-color, $shadow-color: #000) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 3.5px solid $border-color;
+  box-shadow: 5px 5px 0px $shadow-color;
+}
+
+.nb-marquee {
+  @include marquee-styles($white, $black, $black, $black);
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  border: 2px solid black;
-  font-weight: bold;
-  position: relative;
-  .marquee-content {
-    animation: marquee 10s linear infinite;
+  font-family: "Lexend Mega", "Public Sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1rem 0;
+
+  .nb-marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+
     span {
       display: inline-block;
-      padding: 0 20px;
-      font-size: 24px;
+      padding: 0 2rem;
+      font-size: 1.5rem;
     }
   }
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@each $variant, $colors in $button-variants {
+  .nb-marquee.#{$variant} {
+    @include marquee-styles(
+      nth($colors, 1),
+      nth($colors, 2),
+      nth($colors, 4),
+      nth($colors, 5)
+    );
   }
 }

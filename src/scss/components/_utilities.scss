@@ -1,0 +1,267 @@
+.nb-container {
+  @include container;
+}
+
+.nb-hidden {
+  display: none !important;
+}
+
+.nb-block {
+  display: block !important;
+}
+
+.nb-inline {
+  display: inline !important;
+}
+
+.nb-inline-block {
+  display: inline-block !important;
+}
+
+.nb-flex {
+  display: flex !important;
+}
+
+.nb-inline-flex {
+  display: inline-flex !important;
+}
+
+.nb-grid {
+  display: grid !important;
+}
+
+@include respond-to(sm) {
+  .nb-hidden-sm {
+    display: none !important;
+  }
+  
+  .nb-block-sm {
+    display: block !important;
+  }
+  
+  .nb-flex-sm {
+    display: flex !important;
+  }
+  
+  .nb-grid-sm {
+    display: grid !important;
+  }
+}
+
+@include respond-to(md) {
+  .nb-hidden-md {
+    display: none !important;
+  }
+  
+  .nb-block-md {
+    display: block !important;
+  }
+  
+  .nb-flex-md {
+    display: flex !important;
+  }
+  
+  .nb-grid-md {
+    display: grid !important;
+  }
+}
+
+@include respond-to(lg) {
+  .nb-hidden-lg {
+    display: none !important;
+  }
+  
+  .nb-block-lg {
+    display: block !important;
+  }
+  
+  .nb-flex-lg {
+    display: flex !important;
+  }
+  
+  .nb-grid-lg {
+    display: grid !important;
+  }
+}
+
+@include respond-to(xl) {
+  .nb-hidden-xl {
+    display: none !important;
+  }
+  
+  .nb-block-xl {
+    display: block !important;
+  }
+  
+  .nb-flex-xl {
+    display: flex !important;
+  }
+  
+  .nb-grid-xl {
+    display: grid !important;
+  }
+}
+
+.nb-grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.nb-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  
+  @include respond-to(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.nb-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  
+  @include respond-to(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.nb-grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  
+  @include respond-to(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.nb-flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nb-flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@include respond-to(sm) {
+  .nb-flex-col-sm {
+    flex-direction: column;
+  }
+  
+  .nb-flex-row-sm {
+    flex-direction: row;
+  }
+}
+
+@include respond-to(md) {
+  .nb-flex-col-md {
+    flex-direction: column;
+  }
+  
+  .nb-flex-row-md {
+    flex-direction: row;
+  }
+}
+
+.nb-p-1 { padding: 0.5rem; }
+.nb-p-2 { padding: 1rem; }
+.nb-p-3 { padding: 1.5rem; }
+.nb-p-4 { padding: 2rem; }
+
+.nb-m-1 { margin: 0.5rem; }
+.nb-m-2 { margin: 1rem; }
+.nb-m-3 { margin: 1.5rem; }
+.nb-m-4 { margin: 2rem; }
+
+@include respond-to(sm) {
+  .nb-p-sm-1 { padding: 0.75rem; }
+  .nb-p-sm-2 { padding: 1.5rem; }
+  .nb-p-sm-3 { padding: 2rem; }
+  .nb-p-sm-4 { padding: 3rem; }
+  
+  .nb-m-sm-1 { margin: 0.75rem; }
+  .nb-m-sm-2 { margin: 1.5rem; }
+  .nb-m-sm-3 { margin: 2rem; }
+  .nb-m-sm-4 { margin: 3rem; }
+}
+
+@include respond-to(md) {
+  .nb-p-md-1 { padding: 1rem; }
+  .nb-p-md-2 { padding: 2rem; }
+  .nb-p-md-3 { padding: 3rem; }
+  .nb-p-md-4 { padding: 4rem; }
+  
+  .nb-m-md-1 { margin: 1rem; }
+  .nb-m-md-2 { margin: 2rem; }
+  .nb-m-md-3 { margin: 3rem; }
+  .nb-m-md-4 { margin: 4rem; }
+}
+
+.nb-text-center { text-align: center; }
+.nb-text-left { text-align: left; }
+.nb-text-right { text-align: right; }
+
+.nb-text-sm { font-size: 0.875rem; }
+.nb-text-base { font-size: 1rem; }
+.nb-text-lg { font-size: 1.125rem; }
+.nb-text-xl { font-size: 1.25rem; }
+.nb-text-2xl { font-size: 1.5rem; }
+.nb-text-3xl { font-size: 2rem; }
+
+@include respond-to(sm) {
+  .nb-text-sm-lg { font-size: 1rem; }
+  .nb-text-sm-xl { font-size: 1.25rem; }
+  .nb-text-sm-2xl { font-size: 1.5rem; }
+  .nb-text-sm-3xl { font-size: 2rem; }
+}
+
+@include respond-to(md) {
+  .nb-text-md-lg { font-size: 1.125rem; }
+  .nb-text-md-xl { font-size: 1.5rem; }
+  .nb-text-md-2xl { font-size: 2rem; }
+  .nb-text-md-3xl { font-size: 2.5rem; }
+}
+
+.nb-w-full { width: 100%; }
+.nb-w-auto { width: auto; }
+
+.nb-max-w-sm { max-width: 300px; }
+.nb-max-w-md { max-width: 400px; }
+.nb-max-w-lg { max-width: 500px; }
+.nb-max-w-xl { max-width: 600px; }
+
+@include respond-to(sm) {
+  .nb-max-w-sm-lg { max-width: 350px; }
+  .nb-max-w-sm-xl { max-width: 450px; }
+}
+
+@include respond-to(md) {
+  .nb-max-w-md-lg { max-width: 450px; }
+  .nb-max-w-md-xl { max-width: 550px; }
+} 

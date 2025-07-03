@@ -1,84 +1,132 @@
-@mixin button-styles($bg-color, $text-color, $hover-bg-color) {
+@mixin button-styles($bg-color, $text-color, $hover-bg-color, $border-color: #111, $shadow-color: #111) {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.5em 1em;
   background-color: $bg-color;
   color: $text-color;
-  border: none;
+  border: 2.5px solid $border-color;
+  box-shadow: 5px 5px 0 $shadow-color;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 0.875rem;
+  font-family: "Lexend Mega", "Public Sans", Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  border: 2px solid #000000;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  transition: box-shadow 0.2s ease, transform 0.1s ease;
+  position: relative;
+  z-index: 1;
+  outline: none;
+  transition:
+    background 0.15s cubic-bezier(.77,0,.18,1),
+    color 0.15s cubic-bezier(.77,0,.18,1),
+    box-shadow 0.15s cubic-bezier(.77,0,.18,1),
+    transform 0.1s cubic-bezier(.77,0,.18,1);
 
-  &:hover {
-    box-shadow: 3px 3px 0px #000000;
-    background-color: $hover-bg-color;
+  @include respond-to(sm) {
+    padding: 0.6em 1.2em;
+    border-width: 3px;
+    box-shadow: 6px 6px 0 $shadow-color;
+    font-size: 0.9rem;
   }
 
+  @include respond-to(md) {
+    padding: 0.7em 1.5em;
+    border-width: 3.5px;
+    box-shadow: 7px 7px 0 $shadow-color;
+    font-size: 1rem;
+  }
+
+  &:hover,
   &:focus {
-    outline-color: transparent;
+    background-color: $hover-bg-color;
+    color: $text-color;
+    box-shadow: 2px 2px 0 $shadow-color;
+    outline: none;
+    transform: translate(2px, 2px);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
   }
 
   &.disabled {
     background-color: #ccc;
+    color: #888;
     cursor: not-allowed;
+    box-shadow: none;
   }
 }
 
 $button-variants: (
   default: (
-    #ffffff,
-    #000000,
+    $white,
+    $black,
     #aaaaaa,
+    $black,
+    $black,
   ),
   orange: (
     $orange,
-    white,
+    $white,
     $hover-orange,
+    $black,
+    $black,
   ),
   blue: (
     $blue,
-    white,
+    $white,
     $hover-blue,
+    $black,
+    $black,
   ),
   green: (
     $green,
-    white,
+    $white,
     $hover-green,
+    $black,
+    $black,
   ),
   sky-blue: (
     $sky-blue,
-    white,
+    $white,
     $hover-sky-blue,
+    $black,
+    $black,
   ),
   pale-red: (
     $pale-red,
-    white,
+    $white,
     $hover-pale-red,
+    $black,
+    $black,
   ),
   pale-violet: (
     $pale-violet,
-    white,
+    $white,
     $hover-pale-violet,
+    $black,
+    $black,
   ),
   soft-blue: (
     $soft-blue,
-    white,
+    $white,
     $hover-soft-blue,
+    $black,
+    $black,
   ),
   pale-cyan: (
     $pale-cyan,
-    white,
+    $white,
     $hover-pale-cyan,
+    $black,
+    $black,
   ),
   pale-yellow: (
     $pale-yellow,
-    black,
+    $black,
     $hover-pale-yellow,
+    $black,
+    $black,
   ),
 );
 
@@ -89,5 +137,5 @@ $button-variants: (
 }
 
 .rounded {
-  border-radius: 9999px;
+  border-radius: 0.7em;
 }

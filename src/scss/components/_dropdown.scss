@@ -1,29 +1,61 @@
-.dropdown {
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 2px 2px 0px black;
-  border: 1px solid black;
-  padding: 10px;
-  cursor: pointer;
+@mixin dropdown-styles($bg-color, $text-color, $border-color, $shadow-color: #000) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 3.5px solid $border-color;
+  box-shadow: 5px 5px 0px $shadow-color;
 
-  &::after {
-    content: '\25BC'; 
+  &:focus {
+    box-shadow: 2px 2px 0px $shadow-color;
+  }
+}
+
+.nb-dropdown {
+  @include dropdown-styles($white, $black, $black, $black);
+  position: relative;
+  display: inline-block;
+  font-family: "Lexend Mega", "Public Sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0.7em 2.5em 0.7em 1.5em;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s cubic-bezier(0.77, 0, 0.18, 1);
+
+  & + .nb-dropdown-arrow {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 1.5rem;
     transform: translateY(-50%);
-  }
-
-  option {
-    background-color: #fff;
-    color: #333;
-    box-shadow: 2px 2px 0px black;
-    border: 1px solid black;
-    padding: 10px;
+    pointer-events: none;
+    font-size: 1.5rem;
+    color: inherit;
   }
 
   &:focus {
-    outline: none; 
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+    transform: translate(2px, 2px);
+  }
+
+  option {
+    font-family: "Public Sans", sans-serif;
+    font-weight: normal;
+    text-transform: none;
+    background-color: $white;
+    color: $black;
+  }
+}
+
+select.nb-dropdown {
+  @each $variant, $colors in $button-variants {
+    &.#{$variant} {
+      @include dropdown-styles(
+        nth($colors, 1),
+        nth($colors, 2),
+        nth($colors, 4),
+        nth($colors, 5)
+      );
+    }
   }
 }

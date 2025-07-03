@@ -2,36 +2,74 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-family: "Public Sans", sans-serif;
+  font-family: "Lexend Mega", "Public Sans", sans-serif;
   font-size: 1rem;
+  font-weight: 900;
   color: black;
   text-transform: uppercase;
 }
 
-input.nb-checkbox {
+@mixin checkbox-styles(
+  $bg-color,
+  $border-color,
+  $checked-bg-color,
+  $checked-color,
+  $shadow-color: #000
+) {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   width: 25px;
   height: 25px;
-  background-color: #fff;
-  border: 2px solid black;
-  border-radius: 4px;
+  background-color: $bg-color;
+  border: 3.5px solid $border-color;
+  box-shadow: 3px 3px 0px 0px $shadow-color;
   cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.15s cubic-bezier(0.77, 0, 0.18, 1);
+
+  &:hover {
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 1.5px 1.5px 0px 0px $shadow-color;
+  }
 
   &:checked {
-    background-color: #007bff;
-    color: #fff;
+    background-color: $checked-bg-color;
+    color: $checked-color;
 
     &::before {
-      content: "x";
+      content: "✔";
       font-weight: bold;
       color: inherit;
-      left: 5px;
-      position: relative;
-      top: 0px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       font-size: 18px;
-      text-align: center;
     }
+  }
+}
+
+$checkbox-variants: (
+  default: ($white, $black, $black, $white, $black),
+  orange: ($orange, $black, $hover-orange, $black, $black),
+  blue: ($blue, $black, $hover-blue, $white, $black),
+  green: ($green, $black, $hover-green, $white, $black),
+  "sky-blue": ($sky-blue, $black, $hover-sky-blue, $white, $black),
+  "pale-red": ($pale-red, $black, $hover-pale-red, $white, $black),
+  "pale-violet": ($pale-violet, $black, $hover-pale-violet, $white, $black),
+  "soft-blue": ($soft-blue, $black, $hover-soft-blue, $white, $black),
+  "pale-cyan": ($pale-cyan, $black, $hover-pale-cyan, $white, $black),
+  "pale-yellow": ($pale-yellow, $black, $hover-pale-yellow, $black, $black)
+);
+
+input.nb-checkbox {
+  @include checkbox-styles($white, $black, $black, $white, $black);
+}
+
+@each $variant, $colors in $checkbox-variants {
+  input.nb-checkbox.#{$variant} {
+    @include checkbox-styles(nth($colors, 1), nth($colors, 2), nth($colors, 3), nth($colors, 4), nth($colors, 5));
   }
 }

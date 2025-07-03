@@ -1,17 +1,53 @@
+@mixin avatar-styles($bg-color, $text-color, $border-color, $shadow-color: #000) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 3.5px solid $border-color;
+  box-shadow: 3px 3px 0 0 $shadow-color;
+  font-family: "Lexend Mega", "Public Sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .avatar {
+  @include avatar-styles($white, $black, $black, $black);
   overflow: hidden;
-  width: 67px;
-  height: 67px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000;
   border-radius: 50%;
-  box-shadow: 2px 2px 0 0 #031926;
   img {
     border: 0;
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.avatar-sm {
+  width: 40px;
+  height: 40px;
+}
+
+.avatar-md {
+  width: 60px;
+  height: 60px;
+}
+
+.avatar-lg {
+  width: 80px;
+  height: 80px;
+}
+
+@each $variant, $colors in $button-variants {
+  .avatar.#{$variant} {
+    @include avatar-styles(
+      nth($colors, 1),
+      nth($colors, 2),
+      nth($colors, 4),
+      nth($colors, 5)
+    );
   }
 }

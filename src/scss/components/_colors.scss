@@ -1,40 +1,39 @@
-$text-colors: (
-  black: $black,
-  white: $white,
-  red: $red,
-  orange: $orange,
-  blue: $blue,
-  green: $green,
-  sky-blue: $sky-blue,
-  pale-red: $pale-red,
-  pale-violet: $pale-violet,
-  soft-blue: $soft-blue,
-  pale-cyan: $pale-cyan,
-  pale-yellow: $pale-yellow,
+$colors: (
+  "black": $black,
+  "white": $white,
+  "red": $red,
+  "orange": $orange,
+  "blue": $blue,
+  "green": $green,
+  "green-light": $green-light,
+  "sky-blue": $sky-blue,
+  "sky-blue-light": $sky-blue-light,
+  "pale-red": $pale-red,
+  "pale-violet": $pale-violet,
+  "soft-blue": $soft-blue,
+  "pale-cyan": $pale-cyan,
+  "pale-yellow": $pale-yellow,
+  "pale-yellow-light": $pale-yellow-light,
+  "hover-red": $hover-red,
+  "hover-orange": $hover-orange,
+  "hover-blue": $hover-blue,
+  "hover-green": $hover-green,
+  "hover-sky-blue": $hover-sky-blue,
+  "hover-pale-red": $hover-pale-red,
+  "hover-pale-violet": $hover-pale-violet,
+  "hover-soft-blue": $hover-soft-blue,
+  "hover-pale-cyan": $hover-pale-cyan,
+  "hover-pale-yellow": $hover-pale-yellow,
 );
 
-$bg-colors: (
-  black: $black,
-  white: $white,
-  red: $red,
-  orange: $orange,
-  blue: $blue,
-  green: $green,
-  sky-blue: $sky-blue,
-  pale-red: $pale-red,
-  pale-violet: $pale-violet,
-  soft-blue: $soft-blue,
-  pale-cyan: $pale-cyan,
-  pale-yellow: $pale-yellow,
-);
-
-@each $color-name, $color-value in $text-colors {
+@each $color-name, $color-value in $colors {
   .text-#{$color-name} {
     color: $color-value;
   }
-}
-@each $color-name, $color-value in $bg-colors {
   .bg-#{$color-name} {
     background-color: $color-value;
+  }
+  .border-#{$color-name} {
+    border-color: $color-value;
   }
 }

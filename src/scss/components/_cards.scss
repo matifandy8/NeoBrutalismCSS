@@ -41,3 +41,147 @@
 .card-content strong {
   cursor: pointer;
 }
+
+@mixin card-styles(
+  $bg-color,
+  $text-color,
+  $border-color,
+  $shadow-color: #000,
+  $img-bg-color: $pale-yellow
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 3.5px solid $border-color;
+  box-shadow: 8px 8px 0px $shadow-color;
+
+  &:hover {
+    box-shadow: 4px 4px 0px $shadow-color;
+  }
+
+  .nb-card-img {
+    border-bottom: 3.5px solid $border-color;
+    background-color: $img-bg-color;
+  }
+}
+
+.nb-card {
+  @include card-styles($white, $black, $black, $black, $pale-yellow);
+  width: 100%;
+  max-width: 100%;
+  transition: all 0.15s cubic-bezier(0.77, 0, 0.18, 1);
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(sm) {
+    max-width: 320px;
+  }
+
+  @include respond-to(md) {
+    max-width: 350px;
+  }
+
+  @include respond-to(lg) {
+    max-width: 380px;
+  }
+
+  &:hover {
+    transform: translate(4px, 4px);
+  }
+
+  .nb-card-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+
+    @include respond-to(sm) {
+      height: 150px;
+    }
+
+    @include respond-to(md) {
+      height: 180px;
+    }
+
+    @include respond-to(lg) {
+      height: 200px;
+    }
+  }
+
+  .nb-card-content {
+    padding: 0.75rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(sm) {
+      padding: 1rem;
+    }
+
+    @include respond-to(md) {
+      padding: 1.25rem;
+    }
+
+    @include respond-to(lg) {
+      padding: 1.5rem;
+    }
+
+    .nb-card-title {
+      font-family: "Lexend Mega", "Public Sans", sans-serif;
+      font-weight: 900;
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+
+      @include respond-to(sm) {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      @include respond-to(md) {
+        font-size: 1.375rem;
+        margin-bottom: 0.875rem;
+      }
+
+      @include respond-to(lg) {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .nb-card-text {
+      font-family: "Public Sans", sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+
+      @include respond-to(sm) {
+        font-size: 0.9rem;
+        margin-bottom: 1.125rem;
+      }
+
+      @include respond-to(md) {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+      }
+
+      @include respond-to(lg) {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .nb-card-actions {
+      margin-top: auto;
+    }
+  }
+}
+
+@each $variant, $colors in $button-variants {
+  .nb-card.#{$variant} {
+    @include card-styles(
+      nth($colors, 1),
+      nth($colors, 2),
+      nth($colors, 4),
+      nth($colors, 5)
+    );
+  }
+}

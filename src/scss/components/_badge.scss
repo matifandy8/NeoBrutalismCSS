@@ -1,9 +1,22 @@
+@mixin badge-styles($bg-color, $text-color, $border-color, $shadow-color: #000) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 3.5px solid $border-color;
+  box-shadow: 3px 3px 0 0 $shadow-color;
+
+  .badge-inner {
+    border: 3.5px solid $border-color;
+  }
+}
+
 .badge {
+  @include badge-styles($white, $black, $black, $black);
   width: fit-content;
   padding: 5px;
-  border: 2px solid #000;
   border-radius: 50px;
-  box-shadow: 3px 3px 0 0 #000;
+  text-transform: uppercase;
+  font-family: "Lexend Mega", "Public Sans", sans-serif;
+  font-weight: 900;
 
   .badge-inner {
     display: flex;
@@ -11,11 +24,35 @@
     margin: 0;
     justify-content: center;
     align-items: center;
-    border: 2px solid #000;
     border-radius: 50px;
+    background: inherit;
     .badge-text {
       padding: 10px;
       margin: 0;
     }
+  }
+}
+
+$badge-variants: (
+  default: ($white, $black, $black, $black),
+  orange: ($orange, $black, $black, $black),
+  blue: ($blue, $white, $black, $black),
+  green: ($green, $white, $black, $black),
+  "sky-blue": ($sky-blue, $white, $black, $black),
+  "pale-red": ($pale-red, $white, $black, $black),
+  "pale-violet": ($pale-violet, $white, $black, $black),
+  "soft-blue": ($soft-blue, $white, $black, $black),
+  "pale-cyan": ($pale-cyan, $white, $black, $black),
+  "pale-yellow": ($pale-yellow, $black, $black, $black)
+);
+
+@each $variant, $colors in $badge-variants {
+  .badge.#{$variant} {
+    @include badge-styles(
+      nth($colors, 1),
+      nth($colors, 2),
+      nth($colors, 3),
+      nth($colors, 4)
+    );
   }
 }
